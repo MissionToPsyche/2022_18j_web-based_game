@@ -13,26 +13,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2022-11-01T19:28:16.959-04:00
-  initializedAtString: 2022-11-01T19:28:16.959-04:00
+  lastUpdatedAtString: 2022-11-04T13:12:02.732-04:00
+  initializedAtString: 2022-11-04T13:12:02.732-04:00
   currentGitRemote:
-    name: 
-    url: 
+    name: origin
+    url: https://github.com/MissionToPsyche/2022_18j_web-based_game.git
     login: 
     user: 
     host: 
     function: 0
     token: 
   currentGitBranch:
-    name: master
-    tracking: 
+    name: main
+    tracking: origin/main
   currentConfigBranch:
-    name: master
+    name: main
     remote:
-      name: 
-      url: 
-    trackingBranch: 
+      name: origin
+      url: https://github.com/MissionToPsyche/2022_18j_web-based_game.git
+    trackingBranch: main
   currentConfigRemote:
-    name: 
-    url: 
+    name: origin
+    url: https://github.com/MissionToPsyche/2022_18j_web-based_game.git
   currentHead: 
