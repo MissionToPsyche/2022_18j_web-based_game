@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     // Adapted from https://gist.github.com/gunderson/d7f096bd07874f31671306318019d996
     [Header("Camera Settings")]
-    public float camSpeed = 1.0f;
+    public float camSpeed = 0.1f;
     public float camSensitivity = 0.25f;
 
     private Vector3 lastMousePos = new Vector3(255, 255, 255);
