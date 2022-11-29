@@ -6,9 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/FirstRoom.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Puzzle1.unity
     guid: c83ea3a552491b4429c400b268175d4a
+=======
+    path: Assets/Scenes/ControlRoom.unity
+    guid: 908d0d44b36fe4c47ac6ca08bbf59d46
+  - enabled: 1
+    path: Assets/Scenes/FirstRoom.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+>>>>>>> Stashed changes
   m_configObjects: {}
