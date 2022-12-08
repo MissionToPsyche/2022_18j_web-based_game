@@ -9,17 +9,23 @@ public class CameraMovement : MonoBehaviour
     public float camSpeed = 0.1f;
     public float camSensitivity = 0.25f;
 
+    public bool paused;
+
     private Vector3 lastMousePos = new Vector3(255, 255, 255);
     
     // Start is called before the first frame update
     void Start()
     {
+        paused = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(paused){
+            return;
+        }
 
         var mouseMoveY = -1 * Input.GetAxis("Mouse Y");
         var mouseMoveX = Input.GetAxis("Mouse X");
@@ -55,5 +61,15 @@ public class CameraMovement : MonoBehaviour
             velocity += new Vector3(1, 0, 0);
         }
         return velocity;
+    }
+
+    public void Pause() {
+        Cursor.lockState = CursorLockMode.None;
+        paused = true;
+    }
+
+    public void Resume(){
+        Cursor.lockState = CursorLockMode.Locked;
+        paused = false;
     }
 }
