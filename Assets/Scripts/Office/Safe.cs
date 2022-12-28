@@ -36,7 +36,7 @@ public class Safe: MonoBehaviour
 
         keypadScreen = false;
         clickCount = 0;
-        camera = GameObject.Find("GameCamera").GetComponent<CameraMovement>();
+        camera = GameObject.Find("OfficeCamera").GetComponent<CameraMovement>();
         
     }
 
