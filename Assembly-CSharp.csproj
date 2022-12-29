@@ -56,16 +56,18 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\WallCollision.cs" />
     <Compile Include="Assets\Scripts\Office\SafeInteract.cs" />
     <Compile Include="Assets\Scripts\OpenSafe.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Office\FirstDoor.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\ObjectCollision.cs" />
+    <Compile Include="Assets\Scripts\Office\SafeCode\TypeCode.cs" />
     <Compile Include="Assets\Scripts\ControlRoom\ControlDoor.cs" />
     <Compile Include="Assets\Scripts\Office\Safe.cs" />
     <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
-    <Compile Include="Assets\Scripts\WallCollision.cs" />
+    <Compile Include="Assets\Scripts\Office\SafeCode\ButtonCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
