@@ -27,6 +27,9 @@ public class OfficeCamera: MonoBehaviour
     {
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        setAngle(OfficeSpawning.CameraAngle);
+        setPosition(OfficeSpawning.CameraPos);
     }
 
     // Update is called once per frame
@@ -119,6 +122,24 @@ public class OfficeCamera: MonoBehaviour
             }
         }
         return true;
+    }
+
+    private void setPosition(Vector3 position)
+    {
+        transform.position = position;
+    }
+    private void setAngle(Vector3 angle)
+    {
+        transform.eulerAngles= angle;
+    }
+
+    public Vector3 getPosition()
+    {
+        return transform.position;
+    }
+    public Vector3 getAngle()
+    { 
+        return transform.eulerAngles; 
     }
 }
 /*

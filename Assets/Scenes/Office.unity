@@ -1239,32 +1239,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &567563508 stripped
+--- !u!1 &508897516 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ad22c812c7bab047a54f1cf4ddc769a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7905486368447104151, guid: 2ad22c812c7bab047a54f1cf4ddc769a, type: 3}
   m_PrefabInstance: {fileID: 105077629}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &567563510
+--- !u!114 &508897520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567563508}
+  m_GameObject: {fileID: 508897516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fad5a25e646fe49a663c92eb7f3ccb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c03747283697c140a60225111e540e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noEmissionAtStart: 1
-  highlightColor: {r: 1, g: 0, b: 0, a: 1}
-  camera: {fileID: 0}
-  unlocked: 0
-  password: 1234
-  input: 
-  displayText: {fileID: 0}
-  objectToEnable: {fileID: 0}
-  Key: {fileID: 0}
+--- !u!65 &508897522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508897516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37007818, y: 0.4300223, z: 0.2700021}
+  m_Center: {x: -4.796199e-16, y: 4.796199e-15, z: 0.13500105}
 --- !u!1 &745523813
 GameObject:
   m_ObjectHideFlags: 0
