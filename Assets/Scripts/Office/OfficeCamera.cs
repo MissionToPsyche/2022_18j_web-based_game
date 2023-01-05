@@ -12,7 +12,7 @@ public class OfficeCamera: MonoBehaviour
     private ArrayList roomobject_boundaries= new ArrayList();
 
     //Default camera values
-    private float camSpeed = 0.1f;
+    private float camSpeed = 0.03f;
     private float camSensitivity = 0.25f;
     private float ZCam;
     private float XCam;

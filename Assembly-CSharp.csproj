@@ -56,11 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Office\SafeCode\EnterCode_SceneSwitch.cs" />
     <Compile Include="Assets\Scripts\WallCollision.cs" />
     <Compile Include="Assets\Scripts\Office\SafeCode\ENTERButtonCode.cs" />
+    <Compile Include="Assets\Scripts\Office\SafeCode\ExitSafeCode.cs" />
     <Compile Include="Assets\Scripts\SafeInteract.cs" />
     <Compile Include="Assets\Scripts\Office\SafeCode\DELButtonCode.cs" />
     <Compile Include="Assets\Scripts\OpenSafe.cs" />
+    <Compile Include="Assets\Scripts\Office\FanMovement.cs" />
+    <Compile Include="Assets\Scripts\Office\OfficeSpawning.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\FirstDoor.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
@@ -70,9 +74,6 @@
     <Compile Include="Assets\Scripts\Office\SafeCode\NumberButtonCode.cs" />
     <Compile Include="Assets\Scripts\Safe.cs" />
     <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
-    <Compile Include="Assets\Scripts\Office\EnterCode_SceneSwitch.cs" />
-    <Compile Include="Assets\Scripts\Office\OfficeSpawning.cs" />
-    <Compile Include="Assets\Scripts\Office\ExitSafeCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
