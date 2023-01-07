@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fan_angle_z: 0
   rotation: 0.001
-  wait_secs: 0.09
+  wait_secs: 0.01
 --- !u!1 &1699984146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 34677110e1e47004e9e23f6597432276, type: 3}
