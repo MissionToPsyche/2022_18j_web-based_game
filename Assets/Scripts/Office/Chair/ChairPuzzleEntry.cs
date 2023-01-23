@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SafeInteract : MonoBehaviour
+public class ChairPuzzleEntry : MonoBehaviour
 {
     private Color initialColor;
     public bool noEmissionAtStart = true;
@@ -35,7 +35,7 @@ public class SafeInteract : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update2()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
