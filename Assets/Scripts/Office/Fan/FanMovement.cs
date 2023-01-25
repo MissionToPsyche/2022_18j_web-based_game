@@ -29,7 +29,6 @@ public class FanMovement : MonoBehaviour
             }
             yield return new WaitForSeconds(wait_secs);
             transform.Rotate(0, 0, fan_angle_z += rotation, Space.Self);
-            Debug.Log(Time.time);
         }
     }
 }
