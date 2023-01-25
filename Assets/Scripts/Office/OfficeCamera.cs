@@ -8,7 +8,8 @@ public class OfficeCamera: MonoBehaviour
     // Adapted from https://gist.github.com/gunderson/d7f096bd07874f31671306318019d996
     [Header("Camera Settings")]
 
-    //All objects with the applicable script will be input into this arraylist
+    // All objects with the "Object Collision" script will be
+    // added to this list when the scene is loaded
     private ArrayList roomobject_boundaries= new ArrayList();
 
     //Default camera values
@@ -28,6 +29,8 @@ public class OfficeCamera: MonoBehaviour
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        // when the scene loads, set the camera's angle and position
+        // using static class OfficeSpawning
         setAngle(OfficeSpawning.CameraAngle);
         setPosition(OfficeSpawning.CameraPos);
     }
