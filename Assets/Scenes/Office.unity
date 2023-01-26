@@ -450,7 +450,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 1b78405856554574c9ed8d6339243555, type: 3}
   m_PrefabInstance: {fileID: 276106667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &24454588
+--- !u!114 &24454587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,8 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de7948f7be7c204a8b180f534400a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noEmissionAtStart: 1
-  highlightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &46495390
 GameObject:
   m_ObjectHideFlags: 0
