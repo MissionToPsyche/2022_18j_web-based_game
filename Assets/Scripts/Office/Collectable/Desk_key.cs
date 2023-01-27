@@ -36,7 +36,7 @@ public class Desk_key : MonoBehaviour, Collectable_Obj
             FindObjectOfType<UI_Inventory>().add_to_inv();
 
             //remove item from scene
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
