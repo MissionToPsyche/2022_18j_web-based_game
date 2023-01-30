@@ -9,7 +9,7 @@ public class MazeObjectMovement : MonoBehaviour
         float xDirection = Input.GetAxis("Horizontal");
         float yDirection = Input.GetAxis("Vertical");
 
-        Vector3 moveDirection = new Vector3(xDirection, yDirection, 0.0f);
+        Vector3 moveDirection = new Vector3(xDirection, 0.0f, yDirection);
 
         transform.position += moveDirection;
     }
