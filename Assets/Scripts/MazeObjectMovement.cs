@@ -13,4 +13,12 @@ public class MazeObjectMovement : MonoBehaviour
 
         transform.position += moveDirection;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Walls")
+        {
+            Debug.Log("Wall hit");
+        }
+    }
 }
