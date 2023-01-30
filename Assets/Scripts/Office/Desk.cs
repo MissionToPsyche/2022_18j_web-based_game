@@ -18,10 +18,23 @@ public class Desk : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Inventory.GetSelected().Obj_name == "desk_key")
+        Vector3 campos = FindObjectOfType<OfficeCamera>().getPosition();
+        Vector3 camang = FindObjectOfType<OfficeCamera>().getAngle();
+
+        // the player cannot interact with the object at any distance
+        float x_diff = Mathf.Abs(transform.position.x - campos.x);
+        float z_diff = Mathf.Abs(transform.position.z - campos.z);
+
+        if (z_diff < 5 && x_diff < 5)
         {
-            Debug.Log("Desk unlocks now");
-            StartCoroutine(DeskOpenCouroutine());
+            if (Inventory.GetSelected() != null)
+            {
+                if (Inventory.GetSelected().Obj_name == "desk_key")
+                {
+                    Debug.Log("Desk unlocks now");
+                    StartCoroutine(DeskOpenCouroutine());
+                }
+            }
         }
     }
 

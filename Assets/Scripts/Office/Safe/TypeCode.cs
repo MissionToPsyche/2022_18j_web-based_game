@@ -11,7 +11,7 @@ public class TypeCode : MonoBehaviour
     private GameObject type_code;
 
     //example to see if working
-    private string correct_code = "1234";
+    private string correct_code = "2017";
     private string enter_code = "____";
     public string entered_code
     {
