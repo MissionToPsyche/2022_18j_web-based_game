@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - Calendar_popup
   layers:
   - Default
   - TransparentFX
