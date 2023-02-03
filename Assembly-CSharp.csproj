@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Chair Puzzle Ex\Asteroid Boundaries.cs" />
-    <Compile Include="Assets\Scenes\tesetmove_UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

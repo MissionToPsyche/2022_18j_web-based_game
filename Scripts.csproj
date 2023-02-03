@@ -60,14 +60,16 @@
     <Compile Include="Assets\Scripts\Shared Scripts\WallCollision.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ENTERButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ExitSafeCode.cs" />
+    <Compile Include="Assets\Scripts\Office\Chair\ExMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Desk.cs" />
     <Compile Include="Assets\Scripts\Office\Collectable\Desk_key.cs" />
-    <Compile Include="Assets\Scripts\Office\Popup Information\Calendar\Calendar_Info.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\DELButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Fan\FanMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleEntry.cs" />
+    <Compile Include="Assets\Scripts\Office\Popup Information\WhiteBoard_Popup.cs" />
     <Compile Include="Assets\Scripts\Office\OfficeSpawning.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\tesetmove_UI.cs" />
     <Compile Include="Assets\Scripts\FirstDoor.cs" />
@@ -75,7 +77,8 @@
     <Compile Include="Assets\Scripts\Shared Scripts\ObjectCollision.cs" />
     <Compile Include="Assets\Scripts\Office\MazeObjectMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\TypeCode.cs" />
-    <Compile Include="Assets\Scripts\Office\Popup Information\Calendar\Calendar_Popup.cs" />
+    <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleColliders.cs" />
+    <Compile Include="Assets\Scripts\Office\Popup Information\Calendar_Popup.cs" />
     <Compile Include="Assets\Scripts\Office\MazeCollider.cs" />
     <Compile Include="Assets\Scripts\ControlRoom\ControlDoor.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\NumberButtonCode.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Scripts\Shared Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Collectable_Obj.cs" />
+    <Compile Include="Assets\Scripts\Office\Lights.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />
