@@ -13,6 +13,7 @@ public class WhiteBoard_Popup : MonoBehaviour
     }
     void Start()
     {
+        wb_pop = GameObject.Find("WB popup");
         wb_pop.SetActive(false);
     }
 
