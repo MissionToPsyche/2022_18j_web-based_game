@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{978d4834-7584-b765-77b1-3147257aadcc}</ProjectGuid>
+    <ProjectGuid>{c41b0f97-5089-1c4b-c596-6b8de2534455}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Scripts</AssemblyName>
+    <AssemblyName>Unity.Services.Core</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,38 +36,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Office\Safe\EnterCode_SceneSwitch.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\WallCollision.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\ENTERButtonCode.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\ExitSafeCode.cs" />
-     <Compile Include="Assets\Scripts\Office\Chair\ExMovement.cs" />
-     <Compile Include="Assets\Scripts\Office\Desk.cs" />
-     <Compile Include="Assets\Scripts\Office\Collectable\Desk_key.cs" />
-     <Compile Include="Assets\Scripts\Office\Popup Information\Calendar\Calendar_Info.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\DELButtonCode.cs" />
-     <Compile Include="Assets\Scripts\Office\Fan\FanMovement.cs" />
-     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleEntry.cs" />
-     <Compile Include="Assets\Scripts\Office\OfficeSpawning.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\UI_Inventory.cs" />
-     <Compile Include="Assets\Scripts\tesetmove_UI.cs" />
-     <Compile Include="Assets\Scripts\FirstDoor.cs" />
-     <Compile Include="Assets\Scripts\SwitchScene.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\ObjectCollision.cs" />
-     <Compile Include="Assets\Scripts\Office\MazeObjectMovement.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\TypeCode.cs" />
-     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleColliders.cs" />
-     <Compile Include="Assets\Scripts\Office\Popup Information\Calendar\Calendar_Popup.cs" />
-     <Compile Include="Assets\Scripts\Office\MazeCollider.cs" />
-     <Compile Include="Assets\Scripts\ControlRoom\ControlDoor.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\NumberButtonCode.cs" />
-     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\Collectable_Obj.cs" />
-     <Compile Include="Assets\Scripts\Shared Scripts\DistanceFollow.cs" />
-     <None Include="Assets\Scripts\Scripts.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\UnityProjectNotLinkedException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\ServicesInitializationException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\ExternalUserIdProperty.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\UnityServices.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\CommonErrorCodes.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\DynamicDependency\PreserveDependencyAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\RequestFailedException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\ServicesInitializationState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Utils\UnityThreadUtils.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\IUnityServices.cs" />
+     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\InitializationOptions.cs" />
+     <None Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Unity.Services.Core.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -727,10 +708,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{81cf41b1-4715-1239-727b-e56377b69be7}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{f2ef9e8b-d3a6-dcb5-6d54-d3c5f52b7bdc}</Project>
       <Name>UnityEditor.UI</Name>
