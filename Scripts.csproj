@@ -85,8 +85,8 @@
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
-    <Compile Include="Assets\Scripts\Shared Scripts\Collectable_Obj.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
+    <Compile Include="Assets\Scripts\Shared Scripts\Collectable_Obj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />

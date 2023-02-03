@@ -1,6 +1,7 @@
 using GitHub.Unity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Serialization;
 using UnityEngine;
 
 public class Lights : MonoBehaviour
@@ -8,18 +9,19 @@ public class Lights : MonoBehaviour
     // Start is called before the first frame update
     private ArrayList night_lights = new ArrayList();
     private ArrayList day_lights = new ArrayList();
+
     private bool isDay = true;
     private void Awake()
     {
         //get all of the object references first
-        night_lights.Add(GameObject.Find("sun light"));
-        day_lights.Add(GameObject.Find("ceiling fan light"));
+        night_lights.Add(GameObject.Find("sun light").GetComponent<Light>());
+        day_lights.Add(GameObject.Find("ceiling fan light").GetComponent<Light>());
     }
     void Start()
     {
         for(int i = 0; i < night_lights.Count; i++)
         {
-            ((GameObject)night_lights[i]).SetActive(false);
+            ((Light)night_lights[i]).enabled = false;
         }
     }
 
@@ -28,14 +30,23 @@ public class Lights : MonoBehaviour
     {
         
     }
-
     private void OnMouseDown()
     {
-        if (isDay)
+        Debug.Log("clicked switch");
+        //if it is "day", set it to "night"
+        for (int i = 0; i < night_lights.Count; i++)
         {
-            //if it is "day", set it to "night"
-            isDay= false;
-            for()
+            ((Light)night_lights[i]).enabled = isDay;
         }
+        //change it to night, so isDay is false, so the isDay lights should be off
+        isDay= !isDay;
+        for (int i = 0; i < night_lights.Count; i++)
+        {
+            ((Light)day_lights[i]).enabled = isDay;
+        }
+    }
+
+    private class ArrayList<T>
+    {
     }
 }
