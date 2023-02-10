@@ -368,6 +368,9 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="EasyRoads3Dv3Editor">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
@@ -400,6 +403,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyRoads3Dv3">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll</HintPath>
+    </Reference>
+    <Reference Include="DelaunayER">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\DelaunayER.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
