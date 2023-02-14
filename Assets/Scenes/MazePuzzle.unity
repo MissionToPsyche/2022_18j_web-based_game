@@ -6783,7 +6783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 287580004}
   currentTime: 0
-  countDown: 1
+  countDown: 0
   hasFormat: 1
   format: 1
 --- !u!4 &2082969706
