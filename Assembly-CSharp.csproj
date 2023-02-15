@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Chair Puzzle Ex\Asteroid Boundaries.cs" />
     <Compile Include="Assets\PolygonPi\FenceLayout\FenceLayout.cs" />
+    <Compile Include="Assets\Timer2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
