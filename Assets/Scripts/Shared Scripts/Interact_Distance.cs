@@ -17,10 +17,9 @@ public class Interact_Distance
     //Check if camera distance is within the set interaction distance of the GameObject
     public bool checkDistance(int distance, GameObject interactObj)
     {
-
         // the player cannot interact with the object at any distance
         float x_diff = Mathf.Abs(interactObj.transform.position.x - camC.getCamPos().x);
-        float z_diff = Mathf.Abs(interactObj.transform.position.z - camC.getCamPos().x);
+        float z_diff = Mathf.Abs(interactObj.transform.position.z - camC.getCamPos().z);
 
         if (z_diff < distance && x_diff < distance)
         {

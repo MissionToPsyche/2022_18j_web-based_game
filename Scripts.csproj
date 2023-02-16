@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleEntry.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Interact_Distance.cs" />
     <Compile Include="Assets\Scripts\Office\Popup Information\WhiteBoard_Popup.cs" />
-    <Compile Include="Assets\Scripts\Office\OfficeSpawning.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\UI_Inventory.cs" />

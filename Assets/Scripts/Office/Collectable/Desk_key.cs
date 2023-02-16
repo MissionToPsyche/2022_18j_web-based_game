@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Desk_key : MonoBehaviour, Collectable_Obj
 {
+    private Interact_Distance ID = Interact_Distance.GetInsance();
     public string Obj_name { 
         get => "desk_key";
     }
@@ -24,12 +25,7 @@ public class Desk_key : MonoBehaviour, Collectable_Obj
 
     private void OnMouseDown()
     {
-        Vector3 camerapos = OfficeSpawning.CameraPos;
-        float diff_z = Mathf.Abs(transform.position.z - camerapos.z);
-        float diff_x = Mathf.Abs(transform.position.x - camerapos.x);
-        Debug.Log(diff_x+ " " + diff_z);
-
-        if(diff_z < 5 && diff_x < 5)
+        if(ID.checkDistance(5, gameObject))
         {
             //add item to inventory 
             Inventory.Add_inv(this);
