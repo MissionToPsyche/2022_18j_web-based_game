@@ -70,10 +70,8 @@
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleEntry.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Interact_Distance.cs" />
     <Compile Include="Assets\Scripts\Office\Popup Information\WhiteBoard_Popup.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\UI_Inventory.cs" />
-    <Compile Include="Assets\Scripts\tesetmove_UI.cs" />
     <Compile Include="Assets\Scripts\FirstDoor.cs" />
     <Compile Include="Assets\Scripts\Controller - make changes between data and view\camera_controller.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
