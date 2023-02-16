@@ -9,6 +9,7 @@ public class Lights : MonoBehaviour
     // Start is called before the first frame update
     private ArrayList night_lights = new ArrayList();
     private ArrayList day_lights = new ArrayList();
+    private Interact_Distance ID = Interact_Distance.GetInsance();
 
     private bool isDay = true;
     private void Awake()
@@ -32,17 +33,20 @@ public class Lights : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Debug.Log("clicked switch");
-        //if it is "day", set it to "night"
-        for (int i = 0; i < night_lights.Count; i++)
+        Debug.Log("light clicked");
+        if (ID.checkDistance(5, gameObject))
         {
-            ((Light)night_lights[i]).enabled = isDay;
-        }
-        //change it to night, so isDay is false, so the isDay lights should be off
-        isDay= !isDay;
-        for (int i = 0; i < night_lights.Count; i++)
-        {
-            ((Light)day_lights[i]).enabled = isDay;
+            //if it is "day", set it to "night"
+            for (int i = 0; i < night_lights.Count; i++)
+            {
+                ((Light)night_lights[i]).enabled = isDay;
+            }
+            //change it to night, so isDay is false, so the isDay lights should be off
+            isDay = !isDay;
+            for (int i = 0; i < night_lights.Count; i++)
+            {
+                ((Light)day_lights[i]).enabled = isDay;
+            }
         }
     }
 

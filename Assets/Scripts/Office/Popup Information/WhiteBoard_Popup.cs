@@ -30,7 +30,7 @@ public class WhiteBoard_Popup : MonoBehaviour
         //When clicked, show popup information
         // if the player is within a certain horizontal distance from the safe
         // they can interact with it
-        if (ID.checkDistance(5, gameObject, FindObjectOfType<OfficeCamera>().gameObject))
+        if (ID.checkDistance(5, gameObject))
         {
             PM.onClick(wb_pop);
         }

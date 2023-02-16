@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnterCode_SceneSwitch : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Interact_Distance ID = Interact_Distance.GetInsance();
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -38,25 +38,14 @@ public class EnterCode_SceneSwitch : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Vector3 campos = FindObjectOfType<OfficeCamera>().getPosition();
-        Vector3 camang = FindObjectOfType<OfficeCamera>().getAngle();
-
-        // the player cannot interact with the object at any distance
-        float x_diff = Mathf.Abs(transform.position.x - campos.x);
-        float z_diff = Mathf.Abs(transform.position.z - campos.z);
-
         // if the player is within a certain horizontal distance from the safe
         // they can interact with it
-        if(z_diff < 5 && x_diff < 5)
+        if (ID.checkDistance(5, gameObject))
         {
             // if the safe is still locked, switch scenes to
             // enter code
             if(Safe_Locked.IsLocked == true)
             {
-                // save position & angle of camera before entering scene
-                OfficeSpawning.CameraAngle = FindObjectOfType<OfficeCamera>().getAngle();
-                OfficeSpawning.CameraPos = FindObjectOfType<OfficeCamera>().getPosition();
-
                 SceneManager.LoadScene("Safe Code");
             }
         }

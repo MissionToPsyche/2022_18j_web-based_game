@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Interact_Distance ID = Interact_Distance.GetInsance();
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,14 +17,7 @@ public class Desk : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Vector3 campos = FindObjectOfType<OfficeCamera>().getPosition();
-        Vector3 camang = FindObjectOfType<OfficeCamera>().getAngle();
-
-        // the player cannot interact with the object at any distance
-        float x_diff = Mathf.Abs(transform.position.x - campos.x);
-        float z_diff = Mathf.Abs(transform.position.z - campos.z);
-
-        if (z_diff < 5 && x_diff < 5)
+        if (ID.checkDistance(5, gameObject))
         {
             if (Inventory.GetSelected() != null)
             {

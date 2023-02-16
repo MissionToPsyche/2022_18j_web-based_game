@@ -57,12 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Office\Safe\EnterCode_SceneSwitch.cs" />
-    <Compile Include="Assets\Scripts\Shared Scripts\WallCollision.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\WallCollision.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ENTERButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ExitSafeCode.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ExMovement.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\DistanceFollow.cs" />
     <Compile Include="Assets\Scripts\Office\Desk.cs" />
+    <Compile Include="Assets\Scripts\Model - store data\camera.cs" />
     <Compile Include="Assets\Scripts\Office\Collectable\Desk_key.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\DELButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Fan\FanMovement.cs" />
@@ -75,9 +76,10 @@
     <Compile Include="Assets\Scripts\Shared Scripts\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\tesetmove_UI.cs" />
     <Compile Include="Assets\Scripts\FirstDoor.cs" />
+    <Compile Include="Assets\Scripts\Controller - make changes between data and view\camera_controller.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Popup_MainClass.cs" />
-    <Compile Include="Assets\Scripts\Shared Scripts\ObjectCollision.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\ObjectCollision.cs" />
     <Compile Include="Assets\Scripts\Office\MazeObjectMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\TypeCode.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleColliders.cs" />
@@ -87,8 +89,9 @@
     <Compile Include="Assets\Scripts\Office\Safe\NumberButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\Timer.cs" />
+    <Compile Include="Assets\Scripts\Model - store data\boundary.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\Office\OfficeCamera.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\camera_view.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
     <Compile Include="Assets\Scripts\Shared Scripts\Collectable_Obj.cs" />
   </ItemGroup>

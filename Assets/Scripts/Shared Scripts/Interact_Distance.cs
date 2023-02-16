@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Interact_Distance
 {
+    private camera_controller camC = camera_controller.getInstance();
     //Singleton
     private static Interact_Distance instance = new Interact_Distance();
     private Interact_Distance() { }
@@ -14,15 +15,12 @@ public class Interact_Distance
     }
 
     //Check if camera distance is within the set interaction distance of the GameObject
-    public bool checkDistance(int distance, GameObject interactObj, GameObject camera)
+    public bool checkDistance(int distance, GameObject interactObj)
     {
-        //When clicked, show popup information
-        Vector3 campos = camera.GetComponent<OfficeCamera>().getPosition();
-        Vector3 camang = camera.GetComponent<OfficeCamera>().getAngle();
 
         // the player cannot interact with the object at any distance
-        float x_diff = Mathf.Abs(interactObj.transform.position.x - campos.x);
-        float z_diff = Mathf.Abs(interactObj.transform.position.z - campos.z);
+        float x_diff = Mathf.Abs(interactObj.transform.position.x - camC.getCamPos().x);
+        float z_diff = Mathf.Abs(interactObj.transform.position.z - camC.getCamPos().x);
 
         if (z_diff < distance && x_diff < distance)
         {

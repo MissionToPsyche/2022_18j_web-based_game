@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!64 &48441012
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2296,7 +2295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!64 &543549029
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2449,7 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!64 &802435127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3099,7 +3096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!4 &999496214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6fb584a6fc24014ea5904557c05a82a, type: 3}
@@ -3450,7 +3446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!1 &1115036835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3625,7 +3620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 0.2
 --- !u!1001 &1202618854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4186,7 +4180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 0.2
 --- !u!1001 &1524168297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4611,7 +4604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 0.2
 --- !u!1 &1703854819 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9180012828398266957, guid: 53162181a850ec9429e2d694d1500896, type: 3}
@@ -4942,7 +4934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!1 &1900699047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,7 +5045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 0.2
 --- !u!1 &1924127957
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,7 +5326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!64 &1973422521
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5657,7 +5646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33510bc367395d64e84143d3a341fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 1
 --- !u!1 &2085886155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,4 +5838,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundaryBuffer: 0.2
