@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
     <Compile Include="Assets\Scripts\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\Controller - make changes between data and view\camera_controller.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\inventory_view.cs" />
     <Compile Include="Assets\Scripts\Popup_MainClass.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\ObjectCollision.cs" />
     <Compile Include="Assets\Scripts\Office\MazeObjectMovement.cs" />
@@ -80,7 +81,9 @@
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleColliders.cs" />
     <Compile Include="Assets\Scripts\Office\Popup Information\Calendar_Popup.cs" />
     <Compile Include="Assets\Scripts\Office\MazeCollider.cs" />
+    <Compile Include="Assets\Scripts\Model - store data\inventory.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\NumberButtonCode.cs" />
+    <Compile Include="Assets\Scripts\Controller - make changes between data and view\inventory_controller.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\Timer.cs" />
     <Compile Include="Assets\Scripts\Model - store data\boundary.cs" />
@@ -88,6 +91,7 @@
     <Compile Include="Assets\Scripts\View - scripts attached to objs\camera_view.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
     <Compile Include="Assets\Scripts\Collectable_Obj.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\collectable_view.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />
