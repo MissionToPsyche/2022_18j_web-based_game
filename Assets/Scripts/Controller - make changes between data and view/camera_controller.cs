@@ -10,12 +10,11 @@ public class camera_controller
     private camera officeCam;
     private camera conferenceCam;
     private camera currentCam;
-    //(7.01f, 58.912f, 40.1f)
     private camera_controller()
     {
         // Create camera objects to save data for each room's camera
-        this.officeCam = new camera(new Vector3(7.01f, 58.912f, 40.1f), new Vector3(0f, 132.93f, 0f));
-        conferenceCam = new camera(new Vector3(14.373f, 5.638f, 4.985f), new Vector3(0f, 240.434f, 0f));
+        this.officeCam = new camera(new Vector3(7.01f, 58f, 40.1f), new Vector3(0f, 132.93f, 0f));
+        this.conferenceCam = new camera(new Vector3(12.92f, 5.51f, 5.37f), new Vector3(0f, 240.434f, 0f));
         this.currentCam = officeCam;
     }
     public static camera_controller getInstance()

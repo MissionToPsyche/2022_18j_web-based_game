@@ -82,8 +82,8 @@ public class TypeCode : MonoBehaviour
         if(entered_code == correct_code)
         {
             GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.green;
+            Safe_Locked.IsLocked = false;
             SceneManager.LoadScene("Office");
-            Safe_Locked.IsLocked= false;
         }
         else
         {

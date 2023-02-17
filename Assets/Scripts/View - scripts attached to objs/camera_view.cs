@@ -58,7 +58,7 @@ public class camera_view: MonoBehaviour
         if (!camC.pathBlocked(transform.position)) {
             newPos.z = transform.position.z;
             newPos.x = transform.position.x;
-
+            Debug.Log("Here");
             //saves the camera's data to the model camera class
             camC.saveCamPos(newPos);
             camC.savecamAng(transform.eulerAngles);
