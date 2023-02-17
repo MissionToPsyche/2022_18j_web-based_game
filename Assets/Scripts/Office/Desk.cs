@@ -5,6 +5,7 @@ using UnityEngine;
 public class Desk : MonoBehaviour
 {
     private Interact_Distance ID = Interact_Distance.GetInsance();
+    private inventory_controller invC = inventory_controller.getInstance();
     void Start()
     {
     }
@@ -17,13 +18,14 @@ public class Desk : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GameObject SItem = invC.selectedItem();
         if (ID.checkDistance(5, gameObject))
         {
-            if (Inventory.GetSelected() != null)
+            if (SItem != null)
             {
-                if (Inventory.GetSelected().Obj_name == "desk_key")
+                if (SItem.name == "desk_key")
                 {
-                    Debug.Log("Desk unlocks now");
+                    invC.useItem();
                     StartCoroutine(DeskOpenCouroutine());
                 }
             }

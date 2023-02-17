@@ -35,7 +35,7 @@ public class inventory
         }
         return false;
     }
-    public GameObject useItem()
+    public GameObject selectItem()
     {
         return selectedItem;
     }

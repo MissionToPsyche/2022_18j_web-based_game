@@ -38,11 +38,6 @@ public class inventory_controller
         }
         updateHud();
     }
-    private void removeInventory(GameObject item)
-    {
-        currentInv.removeInv(item);
-        updateHud();
-    }
     public void updateSelection(int keyCode)
     {
         int subtractkey = 48;
@@ -60,6 +55,13 @@ public class inventory_controller
             }
         }
     }
+    private void clearSelection()
+    {
+        for(int i = 1; i < 6; i++)
+        {
+            GameObject.Find("background_" + i).GetComponent<Image>().color = Color.white;
+        }
+    }
     private void updateHud()
     {
         int counter = 1; 
@@ -67,6 +69,13 @@ public class inventory_controller
         {
             GameObject.Find("background_" + counter).GetComponent<Image>().sprite =
                 GameObject.Find(GO.name).GetComponent<Image>().sprite;
+            counter++;
+        }
+        //when removing an object, the image of furthest collectable item may not be removed
+        //the for loop starts off at the next position that should not have an image and updates the image to be blank
+        for(int i = counter; i < 5; i++)
+        {
+            GameObject.Find("background_" + i).GetComponent<Image>().sprite = null;
         }
     }
     public bool selectItem(int position)
@@ -75,6 +84,12 @@ public class inventory_controller
     }
     public void useItem()
     {
-        currentInv.removeInv(currentInv.useItem());
+        currentInv.removeInv(currentInv.selectItem());
+        clearSelection();
+        updateHud();
+    }
+    public GameObject selectedItem()
+    {
+        return currentInv.selectItem();
     }
 }

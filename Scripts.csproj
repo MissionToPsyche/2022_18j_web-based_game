@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\DistanceFollow.cs" />
     <Compile Include="Assets\Scripts\Office\Desk.cs" />
     <Compile Include="Assets\Scripts\Model - store data\camera.cs" />
-    <Compile Include="Assets\Scripts\Office\Collectable\Desk_key.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\DELButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Fan\FanMovement.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleEntry.cs" />
@@ -72,7 +71,6 @@
     <Compile Include="Assets\Scripts\Office\Popup Information\WhiteBoard_Popup.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\collectable_view.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\AsteroidBehavior.cs" />
-    <Compile Include="Assets\Scripts\UI_Inventory.cs" />
     <Compile Include="Assets\Scripts\Controller - make changes between data and view\camera_controller.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\inventory_view.cs" />
     <Compile Include="Assets\Scripts\Popup_MainClass.cs" />
@@ -88,10 +86,8 @@
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\Timer.cs" />
     <Compile Include="Assets\Scripts\Model - store data\boundary.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\camera_view.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
-    <Compile Include="Assets\Scripts\Collectable_Obj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />
