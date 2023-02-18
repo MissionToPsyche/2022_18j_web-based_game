@@ -28,6 +28,7 @@ public class Desk : MonoBehaviour
                     invC.useItem();
                     StartCoroutine(DeskOpenCouroutine());
                 }
+                gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
     }
