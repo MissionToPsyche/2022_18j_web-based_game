@@ -19,15 +19,5 @@ public class point_display : MonoBehaviour
 
         pointC.initializeTextMesh(new TextMeshProUGUI[] {mainmission, sidemission, totalmission}, new string[] {initial_main, initial_side, initial_total});
     }
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
 }
