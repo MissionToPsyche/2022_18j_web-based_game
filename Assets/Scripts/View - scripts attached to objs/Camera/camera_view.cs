@@ -14,6 +14,8 @@ public class camera_view: MonoBehaviour
     private Vector3 lastMousePos = new Vector3(255, 255, 255);
     private Vector3 lastCameraPos;
     private Vector3 newPos;
+    public Vector3 p;
+    public Vector3 velocity;
     camera_controller camC = camera_controller.getInstance();
 
     // Start is called before the first frame update
@@ -46,7 +48,32 @@ public class camera_view: MonoBehaviour
         transform.eulerAngles = transform.eulerAngles + mouseMove;
 
         // Keyboard commands
-        Vector3 p = GetBaseInput();
+        GetBaseInput();
+    }
+
+    private void GetBaseInput()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveForward();
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            moveBackword();
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveLeft();
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            moveRight();
+        }
+    }
+
+    public void moveForward()
+    {
+        p = new Vector3(0, 0, 1);
         p *= camC.getSpeed();
 
         //set the new position value equal to the old position value
@@ -55,7 +82,8 @@ public class camera_view: MonoBehaviour
         transform.Translate(p);
 
         //Check if the camera is going to go out of bounds with the room's objects
-        if (!camC.pathBlocked(transform.position)) {
+        if (!camC.pathBlocked(transform.position))
+        {
             newPos.z = transform.position.z;
             newPos.x = transform.position.x;
             Debug.Log("Here");
@@ -66,28 +94,75 @@ public class camera_view: MonoBehaviour
         transform.position = newPos;
     }
 
-    private Vector3 GetBaseInput()
+    public void moveBackword()
     {
-        Vector3 velocity = new Vector3();
-        if (Input.GetKey(KeyCode.W))
-        {
-            velocity += new Vector3(0, 0, 1);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            velocity += new Vector3(0, 0, -1);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            velocity += new Vector3(-1, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            velocity += new Vector3(1, 0, 0);
-        }
+        p = new Vector3(0, 0, -1);
+        p *= camC.getSpeed();
 
-        return velocity;
+        //set the new position value equal to the old position value
+        newPos = transform.position;
+
+        transform.Translate(p);
+
+        //Check if the camera is going to go out of bounds with the room's objects
+        if (!camC.pathBlocked(transform.position))
+        {
+            newPos.z = transform.position.z;
+            newPos.x = transform.position.x;
+            Debug.Log("Here");
+            //saves the camera's data to the model camera class
+            camC.saveCamPos(newPos);
+            camC.savecamAng(transform.eulerAngles);
+        }
+        transform.position = newPos;
     }
+
+    public void moveLeft()
+    {
+        p = new Vector3(-1, 0, 0);
+        p *= camC.getSpeed();
+
+        //set the new position value equal to the old position value
+        newPos = transform.position;
+
+        transform.Translate(p);
+
+        //Check if the camera is going to go out of bounds with the room's objects
+        if (!camC.pathBlocked(transform.position))
+        {
+            newPos.z = transform.position.z;
+            newPos.x = transform.position.x;
+            Debug.Log("Here");
+            //saves the camera's data to the model camera class
+            camC.saveCamPos(newPos);
+            camC.savecamAng(transform.eulerAngles);
+        }
+        transform.position = newPos;
+    }
+
+    public void moveRight()
+    {
+        p = new Vector3(1, 0, 0);
+        p *= camC.getSpeed();
+
+        //set the new position value equal to the old position value
+        newPos = transform.position;
+
+        transform.Translate(p);
+
+        //Check if the camera is going to go out of bounds with the room's objects
+        if (!camC.pathBlocked(transform.position))
+        {
+            newPos.z = transform.position.z;
+            newPos.x = transform.position.x;
+            Debug.Log("Here");
+            //saves the camera's data to the model camera class
+            camC.saveCamPos(newPos);
+            camC.savecamAng(transform.eulerAngles);
+        }
+        transform.position = newPos;
+    }
+
 
     public void Pause()
     {
