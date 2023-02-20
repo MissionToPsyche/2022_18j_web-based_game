@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MazeObjectMovement : MonoBehaviour
 {
 
-    private Rigidbody rb;
+    public Rigidbody rb;
     public float force = 5f;
 
     void Start()
@@ -26,8 +26,8 @@ public class MazeObjectMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        
-        rb.AddForce(input * force);
+
+        MoveAstroid(input,rb);
 
 
     //    transform.Translate( moveSpeed * Input.GetAxis("Horizontal") * Time.fixedDeltaTime, 0, 
@@ -36,10 +36,20 @@ public class MazeObjectMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Finish")
+        if (collision.gameObject.tag == "Finish")
         {
-            Debug.Log("Win!");
-            SceneManager.LoadScene("Office");
+            FinishLine();
         }
+    }
+
+    public void MoveAstroid(Vector3 input, Rigidbody rb)
+    {
+        rb.AddForce(input * force);
+    }
+
+    public void FinishLine()
+    {
+        Debug.Log("Win!");
+        SceneManager.LoadScene("Office");
     }
 }

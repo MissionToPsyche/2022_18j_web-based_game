@@ -19,6 +19,11 @@ public class ToConRoom : MonoBehaviour
 
     private void OnMouseDown()
     {
+        LoadConRoom();
+    }
+
+    public void LoadConRoom()
+    {
         SceneManager.LoadScene("ConferenceRoom");
     }
 }

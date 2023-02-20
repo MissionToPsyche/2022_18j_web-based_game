@@ -19,6 +19,11 @@ public class ChangeToMaze : MonoBehaviour
 
     private void OnMouseDown()
     {
+        LoadMaze();
+    }
+
+    public void LoadMaze()
+    {
         SceneManager.LoadScene("MazePuzzle");
     }
 }

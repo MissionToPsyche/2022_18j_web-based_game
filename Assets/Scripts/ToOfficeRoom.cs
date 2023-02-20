@@ -18,6 +18,11 @@ public class ToOfficeRoom : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        LoadOffice();
+    }
+
+    public void LoadOffice()
+    {
         SceneManager.LoadScene("Office");
     }
 }

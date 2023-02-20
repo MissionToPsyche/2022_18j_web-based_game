@@ -44,8 +44,7 @@ public class camera_view: MonoBehaviour
         var mouseMoveY = -1 * Input.GetAxis("Mouse Y");
         var mouseMoveX = Input.GetAxis("Mouse X");
 
-        var mouseMove = new Vector3(mouseMoveY, mouseMoveX, 0) * camC.getSensitivity();
-        transform.eulerAngles = transform.eulerAngles + mouseMove;
+        Look(mouseMoveY,mouseMoveX);
 
         // Keyboard commands
         GetBaseInput();
@@ -161,6 +160,12 @@ public class camera_view: MonoBehaviour
             camC.savecamAng(transform.eulerAngles);
         }
         transform.position = newPos;
+    }
+
+    public void Look(float y, float x)
+    {
+        var mouseMove = new Vector3(y, x, 0) * camC.getSensitivity();
+        transform.eulerAngles = transform.eulerAngles + mouseMove;
     }
 
 

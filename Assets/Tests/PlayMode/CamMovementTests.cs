@@ -73,5 +73,20 @@ public class CamMovementTests
         Assert.AreEqual(originalPosition.z, player.transform.position.z);
         Assert.IsTrue(originalPosition.x < player.transform.position.x);
     }
-}
 
+    [Test]
+    public void LookAround()
+    {
+        var camObject = new GameObject();
+        var player = camObject.AddComponent<camera_view>();
+
+        var ogCamPosition = player.transform.eulerAngles;
+
+        var mdMouseMoveY = -1f;
+        var mdMouseMoveX = 1f;
+
+        player.Look(mdMouseMoveY, mdMouseMoveX);
+
+        Assert.AreNotEqual(ogCamPosition, player.transform.eulerAngles);
+    }
+}
