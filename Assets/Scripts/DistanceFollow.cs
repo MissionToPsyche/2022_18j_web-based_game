@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Simple script to be used on Camera objects when the camera should follow the object from a static displacement
 public class DistanceFollow : MonoBehaviour
 {
 
