@@ -52,21 +52,27 @@ public class camera_view: MonoBehaviour
 
     private void GetBaseInput()
     {
-        if (Input.GetKey(KeyCode.W))
+        //checks if the camera's position and angle are locked
+        //if locked == true, if statement will read it as false and not allow movement
+        if (!camC.getLock())
         {
-            moveForward();
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveBackword();
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveLeft();
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveRight();
+            //movement keys
+            if (Input.GetKey(KeyCode.W))
+            {
+                moveForward();
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                moveBackword();
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                moveLeft();
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                moveRight();
+            }
         }
     }
 

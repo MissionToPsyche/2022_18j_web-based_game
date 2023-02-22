@@ -77,5 +77,13 @@ public class camera_controller
     {
         return currentCam.getSensitivity();
     }
+    public bool getLock()
+    {
+        return currentCam.getLock();
+    }
+    public void changeLock()
+    {
+        currentCam.changeLock();
+    }
 
 }

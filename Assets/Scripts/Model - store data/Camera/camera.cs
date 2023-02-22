@@ -1,3 +1,4 @@
+using PlasticPipe.PlasticProtocol.Messages;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
@@ -8,6 +9,7 @@ public class camera
     private List<boundary> camBoundaries = new List<boundary>();
     private Vector3 position;
     private Vector3 angle;
+    private bool locked = false;
 
     private float camSpeed = 0.03f;
     private float camSensitivity = 0.25f;
@@ -50,5 +52,13 @@ public class camera
     public float getSensitivity()
     {
         return camSensitivity;
+    }
+    public bool getLock()
+    {
+        return locked;
+    }
+    public void changeLock()
+    {
+        locked = !locked;
     }
 }

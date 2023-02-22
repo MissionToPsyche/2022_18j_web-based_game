@@ -6,12 +6,16 @@ public class main_mission : MonoBehaviour
 {
     private bool collected = false;
     private point_controller pointC = point_controller.getInstance();
+    private Interact_Distance ID = Interact_Distance.GetInsance();
     private void OnMouseDown()
     {
-        if (collected == false)
+        if(ID.checkDistance(5, gameObject))
         {
-            collected = true;
-            pointC.incScore(gameObject);
+            if (collected == false)
+            {
+                collected = true;
+                pointC.incScore(gameObject);
+            }
         }
     }
 }
