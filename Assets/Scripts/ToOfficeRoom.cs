@@ -24,5 +24,6 @@ public class ToOfficeRoom : MonoBehaviour
     public void LoadOffice()
     {
         SceneManager.LoadScene("Office");
+        
     }
 }
