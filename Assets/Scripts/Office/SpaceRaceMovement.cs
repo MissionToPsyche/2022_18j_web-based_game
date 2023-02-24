@@ -12,6 +12,8 @@ public class SpaceRaceMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = Vector3.zero;
+        rb.inertiaTensorRotation = Quaternion.identity;
     }
 
     // Update is called once per frame
