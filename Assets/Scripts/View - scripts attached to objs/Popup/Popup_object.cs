@@ -7,20 +7,23 @@ public class Popup_object : MonoBehaviour
 {
     private popup_controller popupC = popup_controller.getInstance();
     private Interact_Distance ID = Interact_Distance.GetInsance();
-    private GameObject ParentWImage;
+    private GameObject childwithImage;
 
     private void Awake()
     {
         GameObject currentObj = gameObject;
-        GameObject parentObj = gameObject.transform.parent.gameObject;
+        GameObject childObj;
 
-        //while the current object has a parent
-        while (parentObj.GetComponent<Image>() == null)
+
+        for(int i = 0; i < transform.childCount; i++)
         {
-            currentObj = parentObj;
-            parentObj = currentObj.transform.parent.gameObject;
+            childObj= transform.GetChild(i).gameObject;
+            if(childObj.GetComponent<Image>() != null)
+            {
+                childwithImage = childObj;
+                break;
+            }
         }
-        ParentWImage = parentObj;
     }
     void Update()
     {
@@ -35,7 +38,7 @@ public class Popup_object : MonoBehaviour
     {
         if(ID.checkDistance(5, gameObject) && !popupC.isPopupVisible())
         {
-            popupC.display_popup(ParentWImage.GetComponent<Image>());
+            popupC.display_popup(childwithImage.GetComponent<Image>());
         }
     }
 }

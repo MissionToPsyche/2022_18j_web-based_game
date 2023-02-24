@@ -32,8 +32,19 @@ public class point_controller
     {
         // increment the score of the game
         // based on which type of mission was interacted with by the player
-        string go = GO.GetComponent<MonoBehaviour>().GetType().Name;
+        string go = "nothing";
         string parent = GO.transform.parent.name;
+        
+
+        MonoBehaviour[] mono = GO.GetComponents<MonoBehaviour>();
+        foreach(MonoBehaviour mn in mono)
+        {
+            if(mn.GetType().Name == "main_mission" || mn.GetType().Name == "side_mission")
+            {
+                go = mn.GetType().Name;
+                break;
+            }
+        }
         
         // if the puzzle piece calling the incScore function was of the type "main_mission"
         // and the container's name equals the current puzzle piece sequence of the current room
