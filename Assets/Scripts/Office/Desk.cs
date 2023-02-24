@@ -18,17 +18,17 @@ public class Desk : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameObject SItem = invC.selectedItem();
+        string SItem = invC.selectedItem();
         if (ID.checkDistance(5, gameObject))
         {
             if (SItem != null)
             {
-                if (SItem.name == "desk_key")
+                if (SItem == "desk_key")
                 {
                     invC.useItem();
                     StartCoroutine(DeskOpenCouroutine());
                 }
-                gameObject.GetComponent<BoxCollider>().enabled = false;
+                
             }
         }
     }
@@ -44,5 +44,6 @@ public class Desk : MonoBehaviour
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, new_z);
             Debug.Log("new z: " + new_z);
         }
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

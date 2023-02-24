@@ -13,7 +13,6 @@ public class inventory_controller
     private inventory_controller() {
         officeInv = new inventory();
         conferenceInv = new inventory();
-        currentInv = officeInv;
     }
     public static inventory_controller getInstance() { 
         return inventoryC; 
@@ -34,19 +33,19 @@ public class inventory_controller
     {
         if (currentInv.hasSpace())
         {
-            currentInv.addInv(item);
+            currentInv.addInv(item.name);
+            Debug.Log(item.gameObject.name);
         }
         updateHud();
     }
     public void updateSelection(int keyCode)
     {
+        clearSelection();
         int subtractkey = 48;
         for(int i = 1; i < 6; i++)
         {//ranges from 1-5
             if(i == (keyCode - subtractkey))
             {
-                GameObject.Find("background_" + i).GetComponent<Image>().color = Color.white;
-
                 if (selectItem(i))
                 {
                     GameObject.Find("background_" + i).GetComponent<Image>().color = Color.gray;
@@ -65,11 +64,14 @@ public class inventory_controller
     private void updateHud()
     {
         int counter = 1; 
-        foreach (GameObject GO in currentInv.getInv())
+        foreach (string GO in currentInv.getInv())
         {
-            GameObject.Find("background_" + counter).GetComponent<Image>().sprite =
-                GameObject.Find(GO.name).GetComponent<Image>().sprite;
-            counter++;
+            if(GO != null)
+            {
+                GameObject.Find("background_" + counter).GetComponent<Image>().sprite =
+                    GameObject.Find(GO).GetComponent<Image>().sprite;
+                counter++;
+            }
         }
         //when removing an object, the image of furthest collectable item may not be removed
         //the for loop starts off at the next position that should not have an image and updates the image to be blank
@@ -88,7 +90,7 @@ public class inventory_controller
         clearSelection();
         updateHud();
     }
-    public GameObject selectedItem()
+    public string selectedItem()
     {
         return currentInv.selectItem();
     }

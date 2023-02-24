@@ -6,21 +6,21 @@ using UnityEngine;
 
 public class inventory
 {
-    private List<GameObject> inv = new List<GameObject>();
+    private List<string> inv = new List<string>();
     private int maxSize = 5;
-    private GameObject selectedItem;
+    private string selectedItem;
 
-    public List<GameObject> getInv()
+    public List<string> getInv()
     {
         return inv;
     }
-    public void addInv(GameObject item)
+    public void addInv(string itemName)
     {
-        inv.Add(item);
+        inv.Add(itemName);
     }
-    public void removeInv(GameObject item)
+    public void removeInv(string itemName)
     {
-        inv.Remove(item);
+        inv.Remove(itemName);
     }
     public bool hasSpace()
     {
@@ -35,7 +35,7 @@ public class inventory
         }
         return false;
     }
-    public GameObject selectItem()
+    public string selectItem()
     {
         return selectedItem;
     }
