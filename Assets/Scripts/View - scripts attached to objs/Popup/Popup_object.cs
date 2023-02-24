@@ -33,7 +33,7 @@ public class Popup_object : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(ID.checkDistance(5, gameObject))
+        if(ID.checkDistance(5, gameObject) && !popupC.isPopupVisible())
         {
             popupC.display_popup(ParentWImage.GetComponent<Image>());
         }
