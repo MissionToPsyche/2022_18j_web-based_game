@@ -10,6 +10,7 @@ public class collectable_view : MonoBehaviour
 {
     private inventory_controller invC = inventory_controller.getInstance();
     private Interact_Distance ID = Interact_Distance.GetInsance();
+    private scene_controller sceneC = scene_controller.getInstance();
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class collectable_view : MonoBehaviour
                     GameObject childImage = gameObject.transform.GetChild(i).gameObject;
                     invC.addInventory(childImage);
                     gameObject.GetComponent<MeshRenderer>().enabled= false;
+                    gameObject.GetComponent<BoxCollider>().enabled= false;
+                    sceneC.changeData(gameObject.name, transform.position, transform.eulerAngles, false, false);
                 }
             }
             

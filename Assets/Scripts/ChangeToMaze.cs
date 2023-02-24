@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ChangeToMaze : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Interact_Distance ID = Interact_Distance.GetInsance();
+    private inventory_controller invC = inventory_controller.getInstance();
+    private scene_controller sceneC = scene_controller.getInstance();
     void Start()
     {
         
@@ -24,6 +26,12 @@ public class ChangeToMaze : MonoBehaviour
 
     public void LoadMaze()
     {
-        SceneManager.LoadScene("MazePuzzle");
+        if (ID.checkDistance(5, gameObject))
+        {
+            SceneManager.LoadScene("MazePuzzle");
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            //sceneC.changeData(name, transform.position, transform.position, true, false);
+        }
+
     }
 }

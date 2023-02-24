@@ -6,6 +6,7 @@ public class Desk : MonoBehaviour
 {
     private Interact_Distance ID = Interact_Distance.GetInsance();
     private inventory_controller invC = inventory_controller.getInstance();
+    private scene_controller sceneC = scene_controller.getInstance();
     void Start()
     {
     }
@@ -45,5 +46,6 @@ public class Desk : MonoBehaviour
             Debug.Log("new z: " + new_z);
         }
         gameObject.GetComponent<BoxCollider>().enabled = false;
+        sceneC.changeData(gameObject.name, transform.position, transform.eulerAngles, true, false); 
     }
 }
