@@ -11,7 +11,7 @@ public class UnitedStates : MonoBehaviour
     private scene_controller sceneC = scene_controller.getInstance();
     private void OnMouseDown()
     {
-        if(ID.checkDistance(5, gameObject))
+        if(ID.checkDistance(5, gameObject) && !popupC.isPopupVisible())
         {
             string SItem = invC.selectedItem();
 

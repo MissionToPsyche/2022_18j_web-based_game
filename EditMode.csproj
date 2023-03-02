@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{333a449b-b536-c748-8552-c7de4ac35b64}</ProjectGuid>
+    <ProjectGuid>{32c54936-b0e5-e27f-a8f9-dacb27dc6993}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.Settings.Editor</AssemblyName>
+    <AssemblyName>EditMode</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,20 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\FileSettingsRepository.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\Settings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\UserSettingsProvider.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\PackageSettingsRepository.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\Attributes.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\UserSetting.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\SettingsDictionary.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\ProjectUserSettings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\UserSettingsRepository.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\ISettingsRepository.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\UserSettings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\ValueWrapper.cs" />
-     <Compile Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\SettingsGUILayout.cs" />
-     <None Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Editor\Unity.Settings.Editor.asmdef" />
+     <Compile Include="Assets\Tests\EditMode\NewTestScript.cs" />
+     <None Include="Assets\Tests\EditMode\EditMode.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -310,60 +298,6 @@
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Logging">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyRoads3Dv3Editor">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Unity.45">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.UnityShim">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll</HintPath>
-    </Reference>
-    <Reference Include="sfw.net">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\sfw.net.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub.Api.45">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyRoads3Dv3">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll</HintPath>
-    </Reference>
-    <Reference Include="DelaunayER">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\DelaunayER.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -745,14 +679,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{f2ef9e8b-d3a6-dcb5-6d54-d3c5f52b7bdc}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{a18a3599-7e98-9f5e-19b8-d80a6501dcc8}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{c6aa27a5-ba1f-56b6-4851-e317c9e1a907}</Project>
       <Name>UnityEngine.TestRunner</Name>
@@ -760,6 +686,18 @@
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{398d448b-22b9-4a23-8a1b-66b611b308c0}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scripts.csproj">
+      <Project>{978d4834-7584-b765-77b1-3147257aadcc}</Project>
+      <Name>Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{f2ef9e8b-d3a6-dcb5-6d54-d3c5f52b7bdc}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{a18a3599-7e98-9f5e-19b8-d80a6501dcc8}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

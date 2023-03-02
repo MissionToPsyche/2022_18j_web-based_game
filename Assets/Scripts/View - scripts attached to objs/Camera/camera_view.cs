@@ -50,6 +50,7 @@ public class camera_view: MonoBehaviour
         GetBaseInput();
     }
 
+
     private void GetBaseInput()
     {
         //checks if the camera's position and angle are locked
@@ -76,17 +77,29 @@ public class camera_view: MonoBehaviour
         }
     }
 
+    private Vector3 CameraFlatten(Vector3 input, Vector3 localUp)
+    {
+        Transform cam = this.transform;
+        Quaternion flatten = Quaternion.LookRotation(
+                            -localUp,
+                            cam.forward
+                            )
+                            * Quaternion.Euler(Vector3.right * -90f);
+        return flatten * input;
+    }
+
     public void moveForward()
     {
         p = new Vector3(0, 0, 1);
+        p = CameraFlatten(p, Vector3.up).normalized;
         p *= camC.getSpeed();
 
-        //set the new position value equal to the old position value
+        // set the new position value equal to the old position value
         newPos = transform.position;
 
-        transform.Translate(p);
+        transform.Translate(p, Space.World);
 
-        //Check if the camera is going to go out of bounds with the room's objects
+        // Check if the camera is going to go out of bounds with the room's objects
         if (!camC.pathBlocked(transform.position))
         {
             newPos.z = transform.position.z;
@@ -102,12 +115,13 @@ public class camera_view: MonoBehaviour
     public void moveBackword()
     {
         p = new Vector3(0, 0, -1);
+        p = CameraFlatten(p, Vector3.up).normalized;
         p *= camC.getSpeed();
 
         //set the new position value equal to the old position value
         newPos = transform.position;
 
-        transform.Translate(p);
+        transform.Translate(p, Space.World);
 
         //Check if the camera is going to go out of bounds with the room's objects
         if (!camC.pathBlocked(transform.position))
@@ -171,7 +185,11 @@ public class camera_view: MonoBehaviour
     public void Look(float y, float x)
     {
         var mouseMove = new Vector3(y, x, 0) * camC.getSensitivity();
-        transform.eulerAngles = transform.eulerAngles + mouseMove;
+        Vector3 temp = transform.eulerAngles + mouseMove;
+        if(temp.x < 90f || temp.x > 270f)
+        {
+            transform.eulerAngles = temp;
+        }
     }
 
 
