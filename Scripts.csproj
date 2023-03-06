@@ -103,7 +103,9 @@
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\Timer.cs" />
     <Compile Include="Assets\Scripts\Model\Points\sequence.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\helper\helper_view.cs" />
     <Compile Include="Assets\Scripts\Model\Camera\boundary.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\helper\helper_loadscene.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Camera\camera_view.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
   </ItemGroup>

@@ -11,7 +11,7 @@ public class camera
     private Vector3 angle;
     private bool locked = false;
 
-    private float camSpeed = 0.03f;
+    private float camSpeed = 0.075f;
     private float camSensitivity = 0.25f;
 
     public camera(Vector3 pos, Vector3 ang) {

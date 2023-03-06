@@ -10,6 +10,7 @@ public class helper_controller
 {
     GameObject glossaryContent;
     private static helper_controller helpC = new helper_controller();
+    private scene_controller sceneC = scene_controller.getInstance();
 
     private helper_controller() { }
     public static helper_controller getInstance() { return helpC; }
@@ -49,9 +50,24 @@ public class helper_controller
         }
         inpStm.Close();
     }
-    private void getPath()
+    
+    public void OnclickBtns()
     {
-        //getpath goes all the way to the assets folder
-        Debug.Log(Application.dataPath);
+        //Glossary Button
+        GameObject.Find("Glossary").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                sceneC.loadSideScene("Glossary");
+            });
+        //Exit Game Button
+        GameObject.Find("Exit Game").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                //ask if they really want to leave, when they leave the website their data will not save.
+                sceneC.loadSideScene("MainMenu");
+            });
+        //Tutorial Button
     }
+
+
 }

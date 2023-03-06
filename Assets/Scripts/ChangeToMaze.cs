@@ -29,7 +29,6 @@ public class ChangeToMaze : MonoBehaviour
         if (ID.checkDistance(5, gameObject))
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
-            //sceneC.changeData(name, transform.position, transform.eulerAngles, true, false);
             SceneManager.LoadScene("MazePuzzle");
         }
 

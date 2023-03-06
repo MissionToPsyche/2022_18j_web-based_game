@@ -64,4 +64,12 @@ public class scene_controller
         }
         return true;
     }
+    public void loadSideScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+    public void reloadMainScene()
+    {
+        SceneManager.LoadScene(currentScene.getScene());
+    }
 }
