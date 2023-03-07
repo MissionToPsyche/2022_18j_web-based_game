@@ -108,6 +108,12 @@
     <Compile Include="Assets\Scripts\View - scripts attached to objs\helper\helper_loadscene.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Camera\camera_view.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
+    <Compile Include="Assets\Scripts\Controller - make changes between data and view\light_controller.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\invisible.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\disappear.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\night_light.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\day_light.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\light_switch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />

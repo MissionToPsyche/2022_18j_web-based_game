@@ -76,6 +76,7 @@
     <None Include="Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
     <None Include="Assets\EasyRoads3D\_readme .txt" />
     <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
+    <None Include="Assets\Created Assets\Create Textures\Solar System\Solar System Image Credits.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
