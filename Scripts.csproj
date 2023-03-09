@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Office\Chair\ExMovement.cs" />
     <Compile Include="Assets\Scripts\DistanceFollow.cs" />
     <Compile Include="Assets\Scripts\Office\Desk.cs" />
+    <Compile Include="Assets\Scripts\Solar System Minigame Testing\SSPopup.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\light\light_switch.cs" />
     <Compile Include="Assets\Scripts\Model\Camera\camera.cs" />
     <Compile Include="Assets\Scripts\Model\scene\scene_data.cs" />
@@ -115,7 +116,6 @@
     <Compile Include="Assets\Scripts\View - scripts attached to objs\light\invisible.cs" />
     <Compile Include="Assets\Scripts\Office\Lights.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\light\disappear.cs" />
-    <Compile Include="Assets\Scripts\Solar System Minigame Testing\SSPopup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />
