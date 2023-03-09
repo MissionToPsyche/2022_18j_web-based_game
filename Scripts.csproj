@@ -63,9 +63,11 @@
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Camera\WallCollision.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ENTERButtonCode.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\ExitSafeCode.cs" />
+    <Compile Include="Assets\Scripts\Solar System Minigame Testing\InView.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ExMovement.cs" />
     <Compile Include="Assets\Scripts\DistanceFollow.cs" />
     <Compile Include="Assets\Scripts\Office\Desk.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\light_switch.cs" />
     <Compile Include="Assets\Scripts\Model\Camera\camera.cs" />
     <Compile Include="Assets\Scripts\Model\scene\scene_data.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\scene\save_object.cs" />
@@ -85,10 +87,12 @@
     <Compile Include="Assets\Scripts\Office\SpaceRaceMovement.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Camera\ObjectCollision.cs" />
     <Compile Include="Assets\Scripts\Office\MazeObjectMovement.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\night_light.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\TypeCode.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Popup\Popup_object.cs" />
     <Compile Include="Assets\Scripts\Controller - make changes between data and view\popup_controller.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\ChairPuzzleColliders.cs" />
+    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\day_light.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\UnitedStates.cs" />
     <Compile Include="Assets\Scripts\ChangeToMaze.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Points\point_display.cs" />
@@ -102,18 +106,16 @@
     <Compile Include="Assets\Scripts\Controller - make changes between data and view\inventory_controller.cs" />
     <Compile Include="Assets\Scripts\Office\Safe\Safe_Locked.cs" />
     <Compile Include="Assets\Scripts\Office\Chair\Timer.cs" />
+    <Compile Include="Assets\Scripts\Controller - make changes between data and view\light_controller.cs" />
     <Compile Include="Assets\Scripts\Model\Points\sequence.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\helper\helper_view.cs" />
     <Compile Include="Assets\Scripts\Model\Camera\boundary.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\helper\helper_loadscene.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\Camera\camera_view.cs" />
-    <Compile Include="Assets\Scripts\Office\Lights.cs" />
-    <Compile Include="Assets\Scripts\Controller - make changes between data and view\light_controller.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\light\invisible.cs" />
+    <Compile Include="Assets\Scripts\Office\Lights.cs" />
     <Compile Include="Assets\Scripts\View - scripts attached to objs\light\disappear.cs" />
-    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\night_light.cs" />
-    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\day_light.cs" />
-    <Compile Include="Assets\Scripts\View - scripts attached to objs\light\light_switch.cs" />
+    <Compile Include="Assets\Scripts\Solar System Minigame Testing\SSPopup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />
