@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
-public class SSPopup : MonoBehaviour
+public class PsycheInView : InView
 {
     // Start is called before the first frame update
     void Start()

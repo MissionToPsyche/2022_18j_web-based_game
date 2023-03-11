@@ -16,7 +16,7 @@ public class camera_view: MonoBehaviour
     private Vector3 newPos;
     public Vector3 p;
     public Vector3 velocity;
-    camera_controller camC = camera_controller.getInstance();
+    private camera_controller camC = camera_controller.getInstance();
 
     // Start is called before the first frame update
     private void Awake()
