@@ -6,16 +6,20 @@ using System;
 public class camera_view: MonoBehaviour
 {
     // Adapted from https://gist.github.com/gunderson/d7f096bd07874f31671306318019d996
-    [Header("Camera Settings")]
-
+    
     //Default camera values
 
-    public bool paused;
+    // TODO: Make camera settings changable
+    // [Header("Camera Settings")]
+    // public float moveSpeed = 0.075f;
+    // public float camSens = 0.25f;
+
+    private bool paused;
     private Vector3 lastMousePos = new Vector3(255, 255, 255);
     private Vector3 lastCameraPos;
     private Vector3 newPos;
-    public Vector3 p;
-    public Vector3 velocity;
+    private Vector3 p;
+    private Vector3 velocity;
     private camera_controller camC = camera_controller.getInstance();
 
     // Start is called before the first frame update
@@ -36,7 +40,7 @@ public class camera_view: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (paused)
+        if (camC.getLock())
         {
             return;
         }

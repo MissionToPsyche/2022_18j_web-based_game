@@ -11,8 +11,9 @@ public class camera
     private Vector3 angle;
     private bool locked = false;
 
-    private float camSpeed = 0.075f;
-    private float camSensitivity = 0.25f;
+    // TODO: Make camera settings changable
+    private float camSpeed = 0.05f;
+    private float camSensitivity = 0.45f;
 
     public camera(Vector3 pos, Vector3 ang) {
         this.position= pos;
