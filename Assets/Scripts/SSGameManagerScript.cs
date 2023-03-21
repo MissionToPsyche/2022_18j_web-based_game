@@ -23,12 +23,6 @@ public class SSGameManagerScript : MonoBehaviour
 
     public GameObject startButton;
 
-
-    void Start()
-    {
-      
-    }
-
     public void Awake()
     {
         buttonColors.Add(new List<Color32> { new Color32(255, 100, 100, 255), new Color32(255, 0, 0, 255) });
@@ -77,14 +71,7 @@ public class SSGameManagerScript : MonoBehaviour
         clickableButtons[buttonId].GetComponent<Image>().color = buttonColors[buttonId][1];
         audioSource.PlayOneShot(buttonSoundsList[buttonId]);
         yield return new WaitForSeconds(0.5f);
-    }
-
-    public IEnumerator PlayerLost()
-    {
-        audioSource.PlayOneShot(loseSound);
-        playerSequenceList.Clear();
-        yield return new WaitForSeconds(2f);
-        startButton.SetActive(true);
+        clickableButtons[buttonId].GetComponent<Image>().color = buttonColors[buttonId][0];
     }
 
     public IEnumerator StartNextRound()
@@ -93,7 +80,7 @@ public class SSGameManagerScript : MonoBehaviour
         buttons.interactable = false;
         yield return new WaitForSeconds(1f);
         playerTaskList.Add(Random.Range(0, 4));
-        foreach(int index in playerTaskList)
+        foreach (int index in playerTaskList)
         {
             yield return StartCoroutine(HighlightButton(index));
         }
@@ -101,9 +88,16 @@ public class SSGameManagerScript : MonoBehaviour
         yield return null;
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator PlayerLost()
     {
-        
+        audioSource.PlayOneShot(loseSound);
+        playerSequenceList.Clear();
+        playerTaskList.Clear();
+        yield return new WaitForSeconds(2f);
+        startButton.SetActive(true);
     }
+
+   
+
+   
 }
