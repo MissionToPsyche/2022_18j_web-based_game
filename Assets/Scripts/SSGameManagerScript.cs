@@ -5,53 +5,57 @@ using UnityEngine.UI;
 
 public class SSGameManagerScript : MonoBehaviour
 {
+    // Start is called before the first frame update
     private List<int> playerTaskList = new List<int>();
     private List<int> playerSequenceList = new List<int>();
 
     public List<AudioClip> buttonSoundsList = new List<AudioClip>();
+
     public List<List<Color32>> buttonColors = new List<List<Color32>>();
-    public List<Button> clickableButtons = new List<Button>();
+
+    public List<Button> clickableButtons;
 
     public AudioClip loseSound;
+
     public AudioSource audioSource;
+
     public CanvasGroup buttons;
+
     public GameObject startButton;
 
-    private bool playerLost = false;
-    private int taskIndex = 0;
-
-    void Start()
+    public void Awake()
     {
         buttonColors.Add(new List<Color32> { new Color32(255, 100, 100, 255), new Color32(255, 0, 0, 255) });
         buttonColors.Add(new List<Color32> { new Color32(255, 187, 109, 255), new Color32(255, 136, 0, 255) });
         buttonColors.Add(new List<Color32> { new Color32(162, 255, 124, 255), new Color32(72, 248, 0, 255) });
         buttonColors.Add(new List<Color32> { new Color32(57, 111, 255, 255), new Color32(0, 70, 255, 255) });
 
-        for (int i = 0; i < 4; i++)
+        for (int i=0;i<4;i++)
         {
             clickableButtons[i].GetComponent<Image>().color = buttonColors[i][0];
         }
-    }
 
-    void Update()
-    {
-        if (playerLost)
-        {
-            StartCoroutine(PlayerLost());
-            playerLost = false;
-        }
     }
 
     public void AddToPlayerSequenceList(int buttonId)
     {
-        if (!playerLost)
+        playerSequenceList.Add(buttonId);
+        StartCoroutine(HighlightButton(buttonId));
+        for (int i=0;i<playerSequenceList.Count;i++)
         {
-            playerSequenceList.Add(buttonId);
-            StartCoroutine(HighlightButton(buttonId));
-            if (playerSequenceList.Count == playerTaskList.Count)
+            if(playerTaskList[i] == playerSequenceList[i])
             {
-                CompareLists();
+                continue;
             }
+            else
+            {
+                Debug.Log("Lost");
+                return;
+            }
+        }
+        if(playerSequenceList.Count == playerTaskList.Count)
+        {
+            Debug.Log("StartNextRound");
         }
     }
 
@@ -61,7 +65,8 @@ public class SSGameManagerScript : MonoBehaviour
         startButton.SetActive(false);
     }
 
-    IEnumerator HighlightButton(int buttonId)
+
+    public IEnumerator HighlightButton(int buttonId)
     {
         clickableButtons[buttonId].GetComponent<Image>().color = buttonColors[buttonId][1];
         audioSource.PlayOneShot(buttonSoundsList[buttonId]);
@@ -69,13 +74,12 @@ public class SSGameManagerScript : MonoBehaviour
         clickableButtons[buttonId].GetComponent<Image>().color = buttonColors[buttonId][0];
     }
 
-    IEnumerator StartNextRound()
+    public IEnumerator StartNextRound()
     {
         playerSequenceList.Clear();
         buttons.interactable = false;
         yield return new WaitForSeconds(1f);
         playerTaskList.Add(Random.Range(0, 4));
-        taskIndex = 0;
         foreach (int index in playerTaskList)
         {
             yield return StartCoroutine(HighlightButton(index));
@@ -84,25 +88,16 @@ public class SSGameManagerScript : MonoBehaviour
         yield return null;
     }
 
-    void CompareLists()
-    {
-        for (int i = 0; i < playerSequenceList.Count; i++)
-        {
-            if (playerTaskList[i] != playerSequenceList[i])
-            {
-                playerLost = true;
-                break;
-            }
-            else if (i == playerSequenceList.Count - 1)
-            {
-                StartCoroutine(StartNextRound());
-            }
-        }
-    }
-
-    IEnumerator PlayerLost()
+    public IEnumerator PlayerLost()
     {
         audioSource.PlayOneShot(loseSound);
-        playerSequenceList.Clear;
+        playerSequenceList.Clear();
+        playerTaskList.Clear();
+        yield return new WaitForSeconds(2f);
+        startButton.SetActive(true);
     }
+
+   
+
+   
 }
