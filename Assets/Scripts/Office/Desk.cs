@@ -7,6 +7,7 @@ public class Desk : MonoBehaviour
     private Interact_Distance ID = Interact_Distance.GetInsance();
     private inventory_controller invC = inventory_controller.getInstance();
     private scene_controller sceneC = scene_controller.getInstance();
+    [SerializeField] private AudioSource myAudioSource;
     void Start()
     {
     }
@@ -26,6 +27,7 @@ public class Desk : MonoBehaviour
             {
                 if (SItem == "desk_key")
                 {
+                    myAudioSource.Play();
                     invC.useItem();
                     StartCoroutine(DeskOpenCouroutine());
                 }

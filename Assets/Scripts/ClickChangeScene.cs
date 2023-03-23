@@ -7,6 +7,7 @@ using Eflatun.SceneReference;
 public class ClickChangeScene : MonoBehaviour
 {
     [SerializeField] public SceneReference scene;
+    [SerializeField] private AudioSource myAudioSource;
 
     // [HideInInspector]
     // public string sceneName;
@@ -14,6 +15,7 @@ public class ClickChangeScene : MonoBehaviour
     void Start()
     {
         // sceneName = scene.Name;
+        myAudioSource.Play();
         Debug.Log("Path is: " + scene.Path);
     }
 

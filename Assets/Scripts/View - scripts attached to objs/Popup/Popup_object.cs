@@ -8,6 +8,7 @@ public class Popup_object : MonoBehaviour
     private popup_controller popupC = popup_controller.getInstance();
     private Interact_Distance ID = Interact_Distance.GetInsance();
     private GameObject childwithImage;
+    [SerializeField] private AudioSource myAudioSource;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class Popup_object : MonoBehaviour
     {
         if(ID.checkDistance(5, gameObject) && !popupC.isPopupVisible())
         {
+            myAudioSource.Play();
             popupC.display_popup(childwithImage.GetComponent<Image>());
         }
     }
