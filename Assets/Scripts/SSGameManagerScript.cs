@@ -103,6 +103,7 @@ public class SSGameManagerScript : MonoBehaviour
     IEnumerator PlayerLost()
     {
         audioSource.PlayOneShot(loseSound);
-        playerSequenceList.Clear;
+        playerSequenceList.Clear();
+        yield return null;
     }
 }
