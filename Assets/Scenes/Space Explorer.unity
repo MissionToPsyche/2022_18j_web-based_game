@@ -1275,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!4 &515185811 stripped
 Transform:
@@ -1292,7 +1293,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00887476, y: 0.00887476, z: 0.00887476}
+  m_Size: {x: 0.0089, y: 0.0089, z: 0.0089}
   m_Center: {x: -0.0000076293945, y: -0.0000009536743, z: 0}
 --- !u!1 &649708885
 GameObject:
@@ -1681,6 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!4 &861832013 stripped
 Transform:
@@ -1698,7 +1700,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.022087842, y: 0.02208784, z: 0.02208784}
+  m_Size: {x: 0.023, y: 0.023, z: 0.023}
   m_Center: {x: -0.000015258789, y: 0.0000062012114, z: 0}
 --- !u!1 &909295864
 GameObject:
@@ -2156,6 +2158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!4 &1174278782 stripped
 Transform:
@@ -2173,7 +2176,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.26091903, y: 0.260919, z: 0.26091895}
+  m_Size: {x: 0.27, y: 0.27, z: 0.27}
   m_Center: {x: -0.0002212897, y: 0.00006987898, z: -7.307989e-12}
 --- !u!1 &1200780043
 GameObject:
@@ -3675,6 +3678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!4 &1692299985 stripped
 Transform:
@@ -3692,7 +3696,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.023251163, y: 0.023251167, z: 0.023251167}
+  m_Size: {x: 0.025, y: 0.025, z: 0.025}
   m_Center: {x: 0.000024804849, y: -0.0000053048125, z: 6.83361e-13}
 --- !u!1 &1695354959
 GameObject:
@@ -3927,6 +3931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!65 &1759142650
 BoxCollider:
@@ -3939,7 +3944,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21247618, y: 0.21247615, z: 0.21247616}
+  m_Size: {x: 0.213, y: 0.213, z: 0.213}
   m_Center: {x: 0, y: -0.000091552734, z: 0}
 --- !u!1 &1770979935 stripped
 GameObject:
@@ -3963,6 +3968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!65 &1770979942
 BoxCollider:
@@ -3975,7 +3981,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.082905605, y: 0.082905605, z: 0.0829056}
+  m_Size: {x: 0.083, y: 0.083, z: 0.083}
   m_Center: {x: -0.0009765625, y: -0.00033266845, z: 0}
 --- !u!1 &1845492890
 GameObject:
@@ -4255,19 +4261,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7047449164379774179, guid: 60b9a5a5a6e6e994d9f6649ca100aad6, type: 3}
   m_PrefabInstance: {fileID: 104798391}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1940465917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940465913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ZoomEnhancer: 0.3
 --- !u!4 &1940465918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4703682399277921, guid: 60b9a5a5a6e6e994d9f6649ca100aad6, type: 3}
@@ -4284,8 +4277,22 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08565393, y: 0.08565392, z: 0.08565392}
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
   m_Center: {x: 0.00039687403, y: -0.0001068861, z: 9.8307786e-12}
+--- !u!114 &1940465924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940465913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
+  ZoomEnhancer: 0.2
 --- !u!1 &1971014077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,6 +4656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668fbbec21e382442b18573dd96600d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHitBox: {x: 0, y: 0, z: 0}
   ZoomEnhancer: 0.3
 --- !u!4 &2114468534 stripped
 Transform:
@@ -4666,5 +4674,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0123342415, y: 0.0123342415, z: 0.01233424}
+  m_Size: {x: 0.013, y: 0.013, z: 0.013}
   m_Center: {x: -0.000005712729, y: -0.0000006556511, z: 0}

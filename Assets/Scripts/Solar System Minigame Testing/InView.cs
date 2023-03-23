@@ -1,9 +1,11 @@
 using log4net.DateFormatter;
 using PlasticGui.WorkspaceWindow.Home;
+using System.Buffers;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InView : MonoBehaviour
 {
@@ -17,8 +19,9 @@ public class InView : MonoBehaviour
     private bool visited = false;
     private Vector3 originalPos;
     private Vector3 originalScale;
+    private Vector3 originalHitBox;
     private bool zoomedIn = false;
-    public float ZoomEnhancer = .2f;
+    private float ZoomEnhancer = .2f;
     private float newdist = 0f;
     private MeshRenderer planetRender;
     private Plane[] cameraFrustum;
@@ -32,6 +35,7 @@ public class InView : MonoBehaviour
         PlanetVisited = GameObject.Find(name + "Txt").gameObject;
         originalPos = transform.position;
         originalScale = new Vector3(1, 1, 1);
+        originalHitBox = GetComponent<BoxCollider>().size;
 
         // To detect if the newly zoomed in planet is within the camera's view
         planetRender = GetComponent<MeshRenderer>();
@@ -43,11 +47,22 @@ public class InView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         zoomIn();
         if (tpC.isTeleport())
         {
             transform.position= originalPos;
             transform.localScale= originalScale;
+            GetComponent<BoxCollider>().size = originalHitBox;
+            destroyText();
+        }
+
+        if (tpC.allPlanetsVisited())
+        {
+            // set win or lose status
+            // return to office scene
+            tpC.WinLose(float.Parse(GameObject.Find("Light Minutes").GetComponent<TextMeshProUGUI>().text.Split(" ")[0]));
+            SceneManager.LoadScene("Office");
         }
     }
 
@@ -68,7 +83,7 @@ public class InView : MonoBehaviour
         // if they are too far, your fuel will not last to get to the planet         && (travelDist() < 500 && travelDist() > 30) 
         // if they are too close, you will overshoot the planet                     
         Vector3 viewPos = spaceCam.WorldToViewportPoint(transform.position);
-        if ((viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1) && (totalDist() > spaceCam.farClipPlane))
+        if ((viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1) && (totalDist() > spaceCam.farClipPlane) && travelDist() > 20)
         {
             // if the planet hasn't been zoomed in yet
             if (!zoomedIn)
@@ -91,49 +106,13 @@ public class InView : MonoBehaviour
                 }
 
                 Vector3 camera = spaceCam.transform.position;
-                Vector3 tempScale;
-                Vector3 hitbox;
-                if(name == "Earth" || name == "Venus" || name == "Mars" || name == "Mercury")
-                {
-                    // the non-gas giants
-                    if(newdist < (.10f * cameraMaxView))
-                    {
-                        hitbox = tempScale = new Vector3(1.5f, 1.5f, 1.5f);
-                        
-                    }else if(newdist < (.25f * cameraMaxView))
-                    {
-                        hitbox = tempScale = new Vector3(10f, 10f, 10f);
-                    }
-                    else
-                    {
-                        hitbox = tempScale = new Vector3(20f, 20f, 20f);
-                    }
-                }
-                else
-                {
-                    // if the planet is a gas-giant
-                    if (newdist < (.10f * cameraMaxView))
-                    {
-                        hitbox = tempScale = new Vector3(1.5f, 1.5f, 1.5f);
-                    }
-                    else if (newdist < (.25f * cameraMaxView))
-                    {
-                        hitbox = tempScale = new Vector3(2f, 2f, 2f);
-                    }
-                    else
-                    {
-                        hitbox = tempScale = new Vector3(3f, 3f, 3f);
-                    }
-                }
-                transform.localScale = tempScale;
-                Vector3 extends = GetComponent<Collider>().bounds.extents;
-                extends.x *= transform.localScale.x;
-                extends.y *= transform.localScale.y;
-                extends.z *= transform.localScale.z;
+                
+                transform.localScale = planetScaling(newdist, cameraMaxView, name);
                 transform.position = new Vector3(camera.x + newx, originalPos.y, camera.z + newz);
+                GetComponent<BoxCollider>().size *= 1.075f;
 
             }
-            if (inPosition())
+            if (inPosition(spaceCam, gameObject))
             {
                 createText();
             }
@@ -143,8 +122,39 @@ public class InView : MonoBehaviour
             zoomedIn = false;
             transform.position = originalPos;
             transform.localScale = originalScale;
+            GetComponent<BoxCollider>().size = originalHitBox;
             destroyText();
         }
+    }
+
+    private Vector3 planetScaling(float distance, float camMax, string name)
+    {
+        float incrementor = 0;
+        if (name == "Earth" || name == "Venus" || name == "Mars")
+        {
+            incrementor = 1.3655f;
+        }else if (name == "Mercury")
+        {
+
+            incrementor = 1.45f;
+        }
+        else
+        {
+            incrementor = 1.155f;
+        }
+        float scaling = 1f;
+        for (float i = .025f; i <= 1; i += .025f)
+        {
+            // distance away from camera increase
+            // so does the scaling
+            if (distance < i * camMax)
+            {
+                GetComponent<BoxCollider>().size *= scaling;
+                return new Vector3(1 * scaling, 1 * scaling, 1 * scaling);
+            }
+            scaling *= incrementor;
+        }
+        return new Vector3(1, 1, 1);
     }
 
     private float travelDist()
@@ -244,18 +254,22 @@ public class InView : MonoBehaviour
     private void teleport()
     {
         zoomedIn = false;
-        spaceCam.transform.position = new Vector3(originalPos.x, originalPos.y + 10, originalPos.z);
+        tpC.addPlanet(name);
+        spaceCam.transform.position = new Vector3(originalPos.x, originalPos.y + 30, originalPos.z);
     }
 
-    private bool inPosition()
+    private bool inPosition(Camera c, GameObject target)
     {
-        // is the planet in the camera's view
-        var bounds = planetCollider.bounds;
-        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(spaceCam);
-        if(GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
+        var planes = GeometryUtility.CalculateFrustumPlanes(c);
+        var point = target.transform.position;
+
+        foreach (var plane in planes)
         {
-            return true;
+            if(plane.GetDistanceToPoint(point) < 0)
+            {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 }
