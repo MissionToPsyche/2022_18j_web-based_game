@@ -91,36 +91,11 @@ public class WordSearchMananger : MonoBehaviour
 
     List<string> GetDataFromWebpage(string url)
     {
-        List<string> randomSet = new List<string>();
-        WebClient client = new WebClient();
+            List<string> specificSet = new List<string>() { "apple", "banana", "orange", "grape", "kiwi", "pear", "peach" };
 
-        while (randomSet.Count < NumberOfWords)
-        {
-            //make a URL call to the given URL, which is random word generator
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string content = client.DownloadString(url);
+            return specificSet;
+        
 
-            //search the html or xml for this string VVV
-            string searchFor = "random_word";
-
-            //get start and end index of the word that you want
-            int start = content.IndexOf(searchFor);
-            int end = content.IndexOf("</div>", start - searchFor.Length);
-            string word = null;
-
-            //add the letters from the info above into a string
-            for (int j = searchFor.Length + 2; j < end - start; j++)
-            {
-                word += content[start + j];
-            }
-
-            //double check that it can even fit on the board
-            if (word.Length < BoardSize - 3) 
-            {
-                randomSet.Add(word);
-            }
-        }
-        return randomSet;
     }
 
     #region Create Word Search
