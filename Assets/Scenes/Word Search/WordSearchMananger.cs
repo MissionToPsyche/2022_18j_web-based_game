@@ -91,10 +91,11 @@ public class WordSearchMananger : MonoBehaviour
 
     List<string> GetDataFromWebpage(string url)
     {
-            List<string> specificSet = new List<string>() { "psyche", "asteroid", "space", "nasa", "metal", "mission"};
+            List<string> specificSet = new List<string>() { "apple", "banana", "orange", "grape", "kiwi", "pear", "peach" };
 
             return specificSet;
-       
+        
+
     }
 
     #region Create Word Search
