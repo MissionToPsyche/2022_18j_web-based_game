@@ -42,6 +42,24 @@ public class SSGameManagerScript : MonoBehaviour
         }
     }
 
+    public void initializeTextMesh(TextMeshProUGUI[] losetext, string[] initialtext)
+    {
+        // called when the scene initially loads
+        // gets the textMeshProGuis from the UI
+        // update the points based on the kept score
+        loseText = losetext;
+        updatePoints();
+    }
+
+    private void updatePoints()
+    {
+        // visually changes the points shown to the player
+        mainmission.text = initial_main + " " + game_score.getMain();
+        sidemission.text = initial_side + " " + game_score.getSide();
+        totalmission.text = initial_total + " " + game_score.getTotal();
+
+    }
+
     public void AddToPlayerSequenceList(int buttonId)
     {
         if (!playerLost)
