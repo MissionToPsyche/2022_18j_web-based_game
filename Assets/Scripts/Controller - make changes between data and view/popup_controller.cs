@@ -18,12 +18,16 @@ public class popup_controller
     {
         camC.changeLock();
         popup_display.GetComponent<Image>().sprite = objImage.sprite;
+        popup_display.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         popup_visible = true;
     }
     public void clear_popup()
     {
         camC.changeLock();
         popup_display.GetComponent<Image>().sprite = transparent.sprite;
+
+        //check if the correct location has its transparency adjusted
+        popup_display.GetComponent<Image>().color = new Color(1, 1, 1, .25f);
         popup_visible = false;
     }
 
