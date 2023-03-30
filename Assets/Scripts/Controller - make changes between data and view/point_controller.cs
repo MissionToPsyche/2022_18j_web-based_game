@@ -12,7 +12,7 @@ public class point_controller
     // Sequences of puzzle piece order
     // Will be selected based on which room player is located
     private sequence officeSeq = new sequence(new string[] { "Calendar", "OfficeSafe", "OfficeDesk", "Maze", "WhiteBoard", "Magnet", "TrashCan"});
-    private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router"});
+    private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router","CoffeeMachine","Clock"});
     private sequence currentSeq;
 
     // Text GUI's to interact with the view and
