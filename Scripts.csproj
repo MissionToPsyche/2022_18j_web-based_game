@@ -54,9 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="/Users/sebastiangeorge/Documents/GitHub/2022_18j_web-based_game/Assets/Free Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll" />
-    <Analyzer Include="/Users/sebastiangeorge/Documents/GitHub/2022_18j_web-based_game/Assets/Free Assets/EasyRoads3D/lib/DelaunayER.dll" />
-    <Analyzer Include="/Users/sebastiangeorge/Documents/GitHub/2022_18j_web-based_game/Assets/Free Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Office/Safe/EnterCode_SceneSwitch.cs" />
@@ -122,6 +119,7 @@
     <Compile Include="Assets/Scripts/View - scripts attached to objs/light/invisible.cs" />
     <Compile Include="Assets/Scripts/Office/Lights.cs" />
     <Compile Include="Assets/Scripts/View - scripts attached to objs/light/disappear.cs" />
+    <Compile Include="Assets/Scripts/ChangeSequence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/Scripts.asmdef" />
