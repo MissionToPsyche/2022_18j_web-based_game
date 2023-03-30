@@ -565,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7fe2a91efe226ee499ccb03b685c48be, type: 3}
       propertyPath: m_Name
-      value: Fax_texture
+      value: FaxMachine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe2a91efe226ee499ccb03b685c48be, type: 3}
@@ -1274,7 +1274,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: ba7c1599e3d5a734b9f29545efdcf78a, type: 3}
       propertyPath: m_Name
-      value: TV_00_pic
+      value: Television
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba7c1599e3d5a734b9f29545efdcf78a, type: 3}
       propertyPath: m_RootOrder
@@ -1771,7 +1771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1579687469576308, guid: db9fb8bf112e6b0458147765e27fc54a, type: 3}
       propertyPath: m_Name
-      value: jj_door_4_dark
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 1579687469576308, guid: db9fb8bf112e6b0458147765e27fc54a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1942,7 +1942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e1ed2026c715e4e4cb90ce1297e75392, type: 3}
       propertyPath: m_Name
-      value: Beamer_timco
+      value: Projector
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ed2026c715e4e4cb90ce1297e75392, type: 3}
@@ -5117,7 +5117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 028e716b9b7e7254fbb762715282ae8b, type: 3}
       propertyPath: m_Name
-      value: Monitor_1
+      value: ComputerTerminal
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 028e716b9b7e7254fbb762715282ae8b, type: 3}
       propertyPath: m_RootOrder
