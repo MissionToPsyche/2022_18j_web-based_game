@@ -1,8 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System;
 
 public class SpaceRaceMovement : MonoBehaviour
 {
+
+    [Header("Component")]
+    public TextMeshProUGUI timerText;
+
+    private point_controller pointC = point_controller.getInstance();
 
     private Rigidbody rb;
     public float force = 30f;
@@ -45,6 +52,11 @@ public class SpaceRaceMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Finish")
         {
+            float time = float.Parse(timerText.text);
+            int tspent = (int)Math.Round(time);
+            int tpoints = 1000 - tspent;
+            pointC.timerMission(tpoints);
+
             Debug.Log("Win!");
             SceneManager.LoadScene("Office");
         }
