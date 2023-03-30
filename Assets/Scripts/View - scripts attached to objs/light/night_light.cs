@@ -8,7 +8,7 @@ public class night_light : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightC.addNightLight(GetComponent<Light>());
+        lightC.addNightLight(name);
     }
 
     // Update is called once per frame

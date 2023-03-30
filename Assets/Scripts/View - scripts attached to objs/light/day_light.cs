@@ -8,7 +8,7 @@ public class day_light : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lightC.addDayLight(GetComponent<Light>());
+        lightC.addDayLight(name);
     }
 
     // Update is called once per frame

@@ -8,18 +8,18 @@ public class light_controller
     private light_controller() { }
     public static light_controller getInstance() { return lightC; }
 
-    private List<Light> night_lights = new List<Light>();
-    private List<Light> day_lights = new List<Light>();
+    private List<string> night_lights = new List<string>();
+    private List<string> day_lights = new List<string>();
     bool isDayLight = true;
 
-    public void addNightLight(Light light)
+    public void addNightLight(string light)
     {
-        light.enabled= false;
+        GameObject.Find(light).GetComponent<Light>().enabled = false;
         night_lights.Add(light);
     }
-    public void addDayLight(Light light)
+    public void addDayLight(string light)
     {
-        light.enabled= true;
+        GameObject.Find(light).GetComponent<Light>().enabled = true;
         day_lights.Add(light);
     }
 
@@ -31,13 +31,13 @@ public class light_controller
             //turn off night lights
             //turn on day lights
             //re-enable meshRender and boxcollider
-            foreach(Light day in day_lights)
+            foreach(string day in day_lights)
             {
-                day.enabled = true;
+                GameObject.Find(day).GetComponent<Light>().enabled = true;
             }
-            foreach(Light night in night_lights)
+            foreach(string night in night_lights)
             {
-                night.enabled = false;
+                GameObject.Find(night).GetComponent<Light>().enabled = false;
             }
         }
         else
@@ -46,13 +46,13 @@ public class light_controller
             //turn on night lights
             //turn off day lights
             //disable meshRender and boxcollider(some) - invisible (walls), disappear(interactable items)
-            foreach (Light day in day_lights)
+            foreach (string day in day_lights)
             {
-                day.enabled = false;
+                GameObject.Find(day).GetComponent<Light>().enabled = false;
             }
-            foreach (Light night in night_lights)
+            foreach (string night in night_lights)
             {
-                night.enabled = true;
+                GameObject.Find(night).GetComponent<Light>().enabled = true;
             }
         }
     }

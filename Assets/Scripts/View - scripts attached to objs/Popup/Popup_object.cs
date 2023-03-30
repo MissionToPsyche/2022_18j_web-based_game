@@ -39,7 +39,7 @@ public class Popup_object : MonoBehaviour
     {
         if(ID.checkDistance(5, gameObject) && !popupC.isPopupVisible())
         {
-            myAudioSource.Play();
+            //myAudioSource.Play();
             popupC.display_popup(childwithImage.GetComponent<Image>());
         }
     }
