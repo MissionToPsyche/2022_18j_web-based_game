@@ -1830,7 +1830,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1001 &200012590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5492,7 +5492,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &969417969 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155568, guid: 1a8a8d907630a1143819ec799c0a0159, type: 3}
@@ -5543,7 +5543,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &975609056
 GameObject:
   m_ObjectHideFlags: 0
@@ -7419,7 +7419,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &1273180903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9088606115210786407, guid: e6fb584a6fc24014ea5904557c05a82a, type: 3}
@@ -8085,7 +8085,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &1375600318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4120311325393056890, guid: bd1963be995100243b979227ab2af8af, type: 3}
@@ -9808,7 +9808,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1001 &1752350097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10297,7 +10297,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1001 &1842415938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11014,7 +11014,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &1969294084
 GameObject:
   m_ObjectHideFlags: 0
@@ -11506,7 +11506,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: cada36af890f74d40b04a757f7d206cf, type: 3}
     guid: cada36af890f74d40b04a757f7d206cf
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &2085152335
 GameObject:
   m_ObjectHideFlags: 0
