@@ -36,6 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
+    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll" />
+    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll" />
+  </ItemGroup>
+  <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Editor\Core\ProjectBindRedirect\ProjectBindRedirectContentUI.cs" />
      <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Editor\Core\ProjectStateManagement\ProjectStateRequest.cs" />
      <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Editor\Core\ProjectStateManagement\ServiceFlagRequest.cs" />
@@ -390,8 +395,11 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="EasyRoads3Dv3Editor">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll</HintPath>
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
@@ -408,8 +416,8 @@
     <Reference Include="GitHub.UnityShim">
         <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll</HintPath>
     </Reference>
-    <Reference Include="sfw.net">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\sfw.net.dll</HintPath>
+    <Reference Include="DOTween">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -417,8 +425,8 @@
     <Reference Include="GitHub.Api.45">
         <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    <Reference Include="sfw.net">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Plugins\GitHub\Editor\sfw.net.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -426,11 +434,14 @@
     <Reference Include="Newtonsoft.Json">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="unityplastic">
+        <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
     <Reference Include="EasyRoads3Dv3">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll</HintPath>
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll</HintPath>
     </Reference>
     <Reference Include="DelaunayER">
-        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\EasyRoads3D\lib\DelaunayER.dll</HintPath>
+        <HintPath>F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>F:\NASA\2022_18j_web-based_game\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
