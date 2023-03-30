@@ -1,8 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System;
 
 public class MazeObjectMovement : MonoBehaviour
 {
+
+    [Header("Component")]
+    public TextMeshProUGUI timerText;
+
+    private point_controller pointC = point_controller.getInstance();
 
     public Rigidbody rb;
     public float force = 5f;
@@ -38,6 +45,11 @@ public class MazeObjectMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Finish")
         {
+            float time = float.Parse(timerText.text);
+            int tspent = (int)Math.Round(time);
+            int tpoints = 1000 - tspent;
+            pointC.timerMission(tpoints);
+
             FinishLine();
         }
     }

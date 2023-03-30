@@ -88,6 +88,12 @@ public class point_controller
 
     }
 
+    public void timerMission(int tpoints)
+    {
+        game_score.updateMain(tpoints);
+    }
+
+
     public string currentSequence()
     {
         return currentSeq.getCurrentSeq();

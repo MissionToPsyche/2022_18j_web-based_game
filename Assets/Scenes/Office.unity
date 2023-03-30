@@ -2783,7 +2783,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: 8eb7775ac907f264c93f7e0f7722afe6, type: 3}
     guid: 8eb7775ac907f264c93f7e0f7722afe6
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 1496141236}
 --- !u!1 &293697915
 GameObject:
   m_ObjectHideFlags: 0
