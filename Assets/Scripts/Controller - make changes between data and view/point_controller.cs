@@ -11,7 +11,7 @@ public class point_controller
 
     // Sequences of puzzle piece order
     // Will be selected based on which room player is located
-    private sequence officeSeq = new sequence(new string[] { "Calendar", "OfficeSafe", "OfficeDesk", "Maze", "WhiteBoard", "Magnet", "TrashCan"});
+    private sequence officeSeq = new sequence(new string[] { "Calendar_Main", "DeskKey_Main", "DeskDrawer_Main", "WhiteBoard_Main", "Magnet_Main", "TrashBin_Main", "Switch_Main" });
     private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router","CoffeeMachine","Clock"});
     private sequence currentSeq;
 
@@ -33,7 +33,7 @@ public class point_controller
         // increment the score of the game
         // based on which type of mission was interacted with by the player
         string go = "nothing";
-        string parent = GO.transform.parent.name;
+        string obj = GO.name;
         
 
         MonoBehaviour[] mono = GO.GetComponents<MonoBehaviour>();
@@ -49,7 +49,7 @@ public class point_controller
         // if the puzzle piece calling the incScore function was of the type "main_mission"
         // and the container's name equals the current puzzle piece sequence of the current room
         // increment the main mission score
-        if(go == typeof(main_mission).Name && currentSeq.incrementSeq(parent)) {
+        if(go == typeof(main_mission).Name && currentSeq.incrementSeq(obj)) {
 
             //-------------try to make another controller to determine how many points should be received by player-------------------------------------
             game_score.updateMain(100);

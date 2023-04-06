@@ -12,6 +12,7 @@ public class collectable_view : MonoBehaviour
     private Interact_Distance ID = Interact_Distance.GetInsance();
     private scene_controller sceneC = scene_controller.getInstance();
     [SerializeField] private AudioSource myAudioSource;
+    private bool collected = false;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class collectable_view : MonoBehaviour
     {
         // find parent object containing image for inventory and add it to the inventory
         // make collectable object disappear when clicked
-        if (ID.checkDistance(5, gameObject) & gameObject.GetComponent<MeshRenderer>().enabled)
+        if (ID.checkDistance(5, gameObject) & gameObject.GetComponent<MeshRenderer>().enabled & !collected)
         {
             for(int i = 0; i < gameObject.transform.childCount; i++)
             {
@@ -32,6 +33,7 @@ public class collectable_view : MonoBehaviour
                     invC.addInventory(childImage);
                     gameObject.GetComponent<MeshRenderer>().enabled= false;
                     gameObject.GetComponent<BoxCollider>().enabled= false;
+                    collected = true;
                     sceneC.changeData(gameObject.name, transform.position, transform.eulerAngles, false, false);
                 }
             }

@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class EnterCode_SceneSwitch : MonoBehaviour
 {
     private Interact_Distance ID = Interact_Distance.GetInsance();
-    private point_controller pointC = point_controller.getInstance();
     private scene_controller sceneC = scene_controller.getInstance();
     void Start()
     {
@@ -36,8 +35,6 @@ public class EnterCode_SceneSwitch : MonoBehaviour
                 sceneC.changeData("office_safe", safe.transform.position, safe.transform.eulerAngles, true, false);
             }
 
-            //increment the score when the safe is unlocked
-            pointC.incScore(gameObject);
         }
     }
     void Update()
@@ -53,7 +50,7 @@ public class EnterCode_SceneSwitch : MonoBehaviour
         {
             // if the safe is still locked and this puzzle piece is the current one in sequence
             // switch scenes to enter code
-            if (Safe_Locked.IsLocked == true && ("OfficeSafe" == pointC.currentSequence()))
+            if (Safe_Locked.IsLocked == true)
             {
                 SceneManager.LoadScene("Safe Code");
             }

@@ -58,7 +58,8 @@ public class inventory_controller
     {
         for(int i = 1; i < 6; i++)
         {
-            GameObject.Find("background_" + i).GetComponent<Image>().color = Color.white;
+            Image bck = GameObject.Find("background_" + i).GetComponent<Image>();
+            bck.color = new Color(1, 1, 1, .5f);
         }
     }
     private void updateHud()
@@ -68,8 +69,9 @@ public class inventory_controller
         {
             if(GO != null)
             {
-                GameObject.Find("background_" + counter).GetComponent<Image>().sprite =
-                    GameObject.Find(GO).GetComponent<Image>().sprite;
+                Image bck = GameObject.Find("background_" + counter).GetComponent<Image>();
+                bck.sprite = GameObject.Find(GO).GetComponent<Image>().sprite;
+                bck.color = new Color(1, 1, 1, 1);
                 counter++;
             }
         }
