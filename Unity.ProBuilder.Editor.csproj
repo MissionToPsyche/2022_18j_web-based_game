@@ -36,11 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.6\Editor\EditorCore\RepairActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.6\Editor\EditorCore\UnwrapParametersEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.6\Editor\EditorCore\VertexColorPalette.cs" />

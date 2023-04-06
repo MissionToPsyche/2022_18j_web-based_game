@@ -36,11 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.6\Editor\PlasticSCM\Views\Diff\GetClientDiffInfos.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.6\Editor\PlasticSCM\UI\StatusBar\NotificationBar.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.17.6\Editor\PlasticSCM\UI\Tree\TreeViewItemIds.cs" />

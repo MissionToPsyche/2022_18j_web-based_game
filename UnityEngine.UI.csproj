@@ -36,13 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll" />
-  </ItemGroup>
-  <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\UIElements\PanelRaycaster.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Image.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\UIElements\PanelRaycaster.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\LayoutElement.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Selectable.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\VertexModifiers\Shadow.cs" />

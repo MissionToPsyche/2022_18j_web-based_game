@@ -1,47 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Timer : MonoBehaviour
 {
     [Header("Component")]
     public TextMeshProUGUI timerText;
+    public Image tier1;
+    public Image tier2;
+    public Image tier3;
 
     [Header("Timer Settings")]
-    public float currentTime;
+    public double currentTime;
     public bool countDown;
 
     [Header("Format Settings")]
     public bool hasFormat;
-    public TimerFormats format;
-    private Dictionary<TimerFormats, string> timeFormats = new Dictionary<TimerFormats, string>();
+
+    public string format;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeFormats.Add(TimerFormats.Whole, "0");
-        timeFormats.Add(TimerFormats.TenthDecimal, "0.0");
-        timeFormats.Add(TimerFormats.HundrethDecimal, "0.00");
+        format = "mm':'ss':'ff";
     }
 
     // Update is called once per frame
     void Update()
     {
         currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
-        timerText.text = currentTime.ToString();
+        SetTimerText();
     }
 
     private void SetTimerText()
     {
-        timerText.text = hasFormat ? currentTime.ToString(timeFormats[format]) : currentTime.ToString();
-    }
+        System.TimeSpan span = System.TimeSpan.FromSeconds(currentTime);
+        timerText.text = hasFormat ? span.ToString(format) : currentTime.ToString();
 
-
-    public enum TimerFormats
-    {
-        Whole,
-        TenthDecimal,
-        HundrethDecimal
+        if (span.TotalSeconds > 110){
+            tier1.enabled = false;
+            tier2.enabled = false;
+            tier3.enabled = true;
+        }
+        else if (span.TotalSeconds > 90){
+            tier1.enabled = false;
+            tier2.enabled = true;
+            tier3.enabled = false;
+        }
+        else{
+            tier1.enabled = true;
+            tier2.enabled = false;
+            tier3.enabled = false;
+        }
     }
 }

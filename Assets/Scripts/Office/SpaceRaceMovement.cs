@@ -50,12 +50,26 @@ public class SpaceRaceMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // I was able to finish with ~1:15, so make <=1:30 a gold medal, <1:50 silver, and >1:50 bronze 
         if(collision.gameObject.tag == "Finish")
         {
-            float time = float.Parse(timerText.text);
-            int tspent = (int)Math.Round(time);
-            int tpoints = 1000 - tspent;
-            pointC.timerMission(tpoints);
+            Debug.Log(timerText.text);
+            double time = TimeSpan.ParseExact(timerText.text, "mm':'ss':'ff", null, 0).TotalSeconds;
+            Debug.Log(time);
+            int tspent = (int)Math.Ceiling(time);
+            if (tspent <= 90){
+                pointC.timerMission(1000);
+            
+            }           
+            else if (tspent <= 110){
+                pointC.timerMission(750);
+            }
+            else{
+                pointC.timerMission(500);
+            }
+            
+            // int tpoints = 1000 - tspent;
+            // pointC.timerMission(tpoints);
 
             Debug.Log("Win!");
             SceneManager.LoadScene("Office");

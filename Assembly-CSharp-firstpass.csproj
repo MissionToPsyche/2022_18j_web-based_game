@@ -36,11 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\lib\DelaunayER.dll" />
-    <Analyzer Include="F:\NASA\2022_18j_web-based_game\Assets\Free Assets\EasyRoads3D\Editor\EasyRoads3Dv3Editor.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
