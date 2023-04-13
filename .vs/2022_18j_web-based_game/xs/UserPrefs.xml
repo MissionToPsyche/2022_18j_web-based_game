@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{0C507046-BF64-44B1-727E-3EE9DA6BF855}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller - make changes between data and view/point_controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Solar System Minigame Testing/space_explorer_camera.cs">
     <Files>
       <File FileName="Assets/Scripts/View - scripts attached to objs/Points/side_mission.cs" Line="8" Column="1" />
       <File FileName="Assets/Scripts/View - scripts attached to objs/Popup/Popup_object.cs" />
       <File FileName="Assets/Scripts/View - scripts attached to objs/Points/main_mission.cs" />
       <File FileName="Assets/Scripts/Controller - make changes between data and view/point_controller.cs" Line="15" Column="108" />
       <File FileName="Assets/Scripts/Office/Chair/Timer.cs" />
-      <File FileName="Assets/Scripts/ChangeSequence.cs" />
       <File FileName="Assets/Scripts/ClickChangeScene.cs" />
       <File FileName="Assets/Scripts/View - scripts attached to objs/Camera/camera_view.cs" />
       <File FileName="Assets/Scripts/Solar System Minigame Testing/space_explorer_camera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SSGameManagerScript.cs" Line="118" Column="1" />
+      <File FileName="Assets/Scripts/Office/MazeObjectMovement.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,14 +23,14 @@
                   <Node name="Chair" expanded="True" />
                   <Node name="Safe" expanded="True" />
                 </Node>
-                <Node name="Solar System Minigame Testing" expanded="True" />
+                <Node name="Solar System Minigame Testing" expanded="True">
+                  <Node name="space_explorer_camera.cs" selected="True" />
+                </Node>
                 <Node name="View - scripts attached to objs" expanded="True">
                   <Node name="Camera" expanded="True" />
                   <Node name="inventory" expanded="True" />
                   <Node name="light" expanded="True" />
-                  <Node name="Points" expanded="True">
-                    <Node name="side_mission.cs" selected="True" />
-                  </Node>
+                  <Node name="Points" expanded="True" />
                   <Node name="Popup" expanded="True" />
                   <Node name="scene" expanded="True" />
                 </Node>
@@ -45,7 +46,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2fc72247-0da4-428e-99ed-d8c0bc00c0f3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8a72d4bd-deeb-4f0d-b423-4e5d328af3de" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

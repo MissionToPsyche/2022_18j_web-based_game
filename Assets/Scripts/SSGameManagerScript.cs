@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SSGameManagerScript : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class SSGameManagerScript : MonoBehaviour
 
     private bool playerLost = false;
     private int taskIndex = 0;
+
+    public int points = 1000;
+    private point_controller pointC = point_controller.getInstance();
 
     void Start()
     {
@@ -93,6 +97,10 @@ public class SSGameManagerScript : MonoBehaviour
                 playerLost = true;
                 break;
             }
+            else if ((i == playerSequenceList.Count - 1)&&(playerTaskList.Count == 6))
+            {
+                PlayerWon();
+            }
             else if (i == playerSequenceList.Count - 1)
             {
                 StartCoroutine(StartNextRound());
@@ -104,6 +112,16 @@ public class SSGameManagerScript : MonoBehaviour
     {
         audioSource.PlayOneShot(loseSound);
         playerSequenceList.Clear();
+        if (points > 0)
+        {
+            points = -100;
+        }
         yield return null;
+    }
+
+    void PlayerWon()
+    {
+        pointC.timerMission(points);
+        SceneManager.LoadScene("ConferenceRoom");
     }
 }
