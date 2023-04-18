@@ -12,7 +12,16 @@ public class point_controller
     // Sequences of puzzle piece order
     // Will be selected based on which room player is located
     private sequence officeSeq = new sequence(new string[] { "Calendar_Main", "DeskKey_Main", "DeskDrawer_Main", "WhiteBoard_Main", "Magnet_Main", "TrashBin_Main", "Switch_Main" });
+
+    private string[] officeHints = new string[] {
+        "Look at WHEN the Psyche Mission was accepted by NASA!",
+        ""
+    };
     private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router","CoffeeMachine","Clock"});
+
+    private string[] conferenceHints = new string[] {
+
+    };
     private sequence currentSeq;
 
     // Text GUI's to interact with the view and
@@ -107,5 +116,16 @@ public class point_controller
     public void changeToOffSequence()
     {
         currentSeq = officeSeq;
+    }
+    public string hintTxt()
+    {
+        if(currentSeq == conferenceSeq)
+        {
+            return conferenceHints[currentSeq.getPos()];
+        }
+        else
+        {
+            return officeHints[currentSeq.getPos()];
+        }
     }
 }

@@ -36,5 +36,10 @@ public class sequence
         return order[currentposition];
     }
 
+    public int getPos()
+    {
+        return currentposition;
+    }
+
 
 }

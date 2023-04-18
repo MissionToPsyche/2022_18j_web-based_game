@@ -11,6 +11,7 @@ public class helper_controller
     GameObject glossaryContent;
     private static helper_controller helpC = new helper_controller();
     private scene_controller sceneC = scene_controller.getInstance();
+    private point_controller pointC = point_controller.getInstance();
 
     private helper_controller() { }
     public static helper_controller getInstance() { return helpC; }
@@ -67,6 +68,18 @@ public class helper_controller
                 sceneC.loadSideScene("MainMenu");
             });
         //Tutorial Button
+
+        //Help/Hints Button
+        GameObject.Find("Help / Hints").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                TextMeshProUGUI helpertxt = GameObject.Find("HelperText").GetComponent<TextMeshProUGUI>();
+                Image coverimg = GameObject.Find("Hint Display").GetComponent<Image>();
+                coverimg.enabled = true;
+                helpertxt.enabled= true;
+                helpertxt.text = pointC.hintTxt();
+
+            });
     }
 
 
