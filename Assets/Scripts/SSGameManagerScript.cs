@@ -114,7 +114,7 @@ public class SSGameManagerScript : MonoBehaviour
         playerSequenceList.Clear();
         if (points > 0)
         {
-            points = -100;
+            points = points-100;
         }
         yield return null;
     }

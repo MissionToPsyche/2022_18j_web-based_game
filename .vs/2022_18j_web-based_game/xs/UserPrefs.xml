@@ -1,31 +1,26 @@
 ﻿<Properties StartupConfiguration="{0C507046-BF64-44B1-727E-3EE9DA6BF855}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Solar System Minigame Testing/space_explorer_camera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Word Search/WordSearchMananger.cs">
     <Files>
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Points/side_mission.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Popup/Popup_object.cs" />
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Points/main_mission.cs" />
-      <File FileName="Assets/Scripts/Controller - make changes between data and view/point_controller.cs" Line="15" Column="108" />
-      <File FileName="Assets/Scripts/Office/Chair/Timer.cs" />
-      <File FileName="Assets/Scripts/ClickChangeScene.cs" />
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Camera/camera_view.cs" />
-      <File FileName="Assets/Scripts/Solar System Minigame Testing/space_explorer_camera.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SSGameManagerScript.cs" Line="118" Column="1" />
-      <File FileName="Assets/Scripts/Office/MazeObjectMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Word Search/WordSearchMananger.cs" Line="5" Column="19" />
+      <File FileName="Assets/Scenes/Word Search/WordSearchLetterController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="2022_18j_web-based_game" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Scenes" expanded="True">
+                <Node name="Word Search" expanded="True">
+                  <Node name="WordSearchMananger.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Controller - make changes between data and view" expanded="True" />
                 <Node name="Office" expanded="True">
                   <Node name="Chair" expanded="True" />
                   <Node name="Safe" expanded="True" />
                 </Node>
-                <Node name="Solar System Minigame Testing" expanded="True">
-                  <Node name="space_explorer_camera.cs" selected="True" />
-                </Node>
+                <Node name="Solar System Minigame Testing" expanded="True" />
                 <Node name="View - scripts attached to objs" expanded="True">
                   <Node name="Camera" expanded="True" />
                   <Node name="inventory" expanded="True" />
@@ -46,7 +41,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8a72d4bd-deeb-4f0d-b423-4e5d328af3de" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="78ac7798-08a2-43ed-bdbd-464d040fb706" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

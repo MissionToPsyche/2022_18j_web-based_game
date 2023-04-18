@@ -21,6 +21,8 @@ public class WordSearchLetterController : MonoBehaviour
     {
         DefaultColor = GetComponent<Image>().color;
         wsm = FindObjectOfType<WordSearchMananger>();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     //when the mouse enters the letter

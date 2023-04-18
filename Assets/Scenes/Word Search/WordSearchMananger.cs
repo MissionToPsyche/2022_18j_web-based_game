@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Net;
+using UnityEngine.SceneManagement;
 
 public class WordSearchMananger : MonoBehaviour
 {
@@ -739,6 +740,11 @@ public class WordSearchMananger : MonoBehaviour
         StartCoroutine(FindObjectOfType<TransitionController>().MoveScenes("MainMenu", "Loading Main Menu...", false));
     }
     #endregion
+
+    public void ToConferenceRoom()
+    {
+        SceneManager.LoadScene("ConferenceRoom");
+    }
 
     private void FixedUpdate()
     {

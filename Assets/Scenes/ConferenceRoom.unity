@@ -3568,6 +3568,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2c049195f444df6871d38c2a09e2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1311881278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fceb5e52f8508724196c02c1216318d9, type: 3}
+  m_PrefabInstance: {fileID: 1848043352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1311881284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311881278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1719a1bb9f3794487a41ca00e1960e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1311881285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311881278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93051f0e3a6f0a34fa58f15e9e3d2df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene:
+    asset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+    guid: 2cda990e2423bbf4892e6590ba056729
+  myAudioSource: {fileID: 0}
 --- !u!1001 &1358340900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4021,6 +4054,7 @@ GameObject:
   - component: {fileID: 1595264480}
   - component: {fileID: 1595264479}
   - component: {fileID: 1595264478}
+  - component: {fileID: 1595264482}
   m_Layer: 0
   m_Name: Box of Markers
   m_TagString: Untagged
@@ -4106,6 +4140,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595264482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595264477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93051f0e3a6f0a34fa58f15e9e3d2df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene:
+    asset: {fileID: 102900000, guid: 9034ff6c75d1e064ba7367e82a87c4e1, type: 3}
+    guid: 9034ff6c75d1e064ba7367e82a87c4e1
+  myAudioSource: {fileID: 0}
 --- !u!4 &1606491111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456804, guid: 4073f41b7d930f94d9470df64ec12b53, type: 3}
