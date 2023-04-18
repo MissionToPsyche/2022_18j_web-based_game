@@ -15,7 +15,6 @@ public class ClickChangeScene : MonoBehaviour
     void Start()
     {
         // sceneName = scene.Name;
-        myAudioSource.Play();
         Debug.Log("Path is: " + scene.Path);
     }
 
@@ -32,6 +31,7 @@ public class ClickChangeScene : MonoBehaviour
 
     public void LoadScene()
     {
+        myAudioSource.Play();
         SceneManager.LoadScene(scene.Name);
     }
 }
