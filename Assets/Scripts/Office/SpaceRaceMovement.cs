@@ -57,9 +57,9 @@ public class SpaceRaceMovement : MonoBehaviour
             double time = TimeSpan.ParseExact(timerText.text, "mm':'ss':'ff", null, 0).TotalSeconds;
             Debug.Log(time);
             int tspent = (int)Math.Ceiling(time);
+            
             if (tspent <= 90){
                 pointC.timerMission(1000);
-            
             }           
             else if (tspent <= 110){
                 pointC.timerMission(750);
