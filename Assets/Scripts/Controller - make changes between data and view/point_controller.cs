@@ -23,7 +23,7 @@ public class point_controller
         "The note may be onto something!",
         "Check out the planets to explore space!"
     };
-    private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router","CoffeeMachine","Clock"});
+    private sequence conferenceSeq = new sequence(new string[] { "Whiteboard", "WiFi Router", "CoffeeMachine", "Clock"});
 
     private string[] conferenceHints = new string[] {
 
