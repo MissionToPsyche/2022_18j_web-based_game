@@ -44,8 +44,4 @@ public class save_scene
         }
     }
 
-    public List<scene_data> getSceneData()
-    {
-        return scene_Data;
-    }
 }

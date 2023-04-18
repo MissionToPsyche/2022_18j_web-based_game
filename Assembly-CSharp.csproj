@@ -59,7 +59,10 @@
     <Compile Include="Assets\Scenes\Word Search\WordSearchMananger.cs" />
     <Compile Include="Assets\Scenes\Word Search\WordSearchLetterController.cs" />
     <Compile Include="Assets\Free Assets\Clock\Scripts\Clock.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\MainMenu.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Free Assets\PolygonPi\FenceLayout\FenceLayout.cs" />
     <Compile Include="Assets\Timer2.cs" />
     <Compile Include="Assets\MainMenu\TransitionController.cs" />

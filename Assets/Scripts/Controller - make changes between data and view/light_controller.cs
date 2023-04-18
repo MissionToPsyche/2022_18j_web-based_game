@@ -10,7 +10,7 @@ public class light_controller
 
     private List<string> night_lights = new List<string>();
     private List<string> day_lights = new List<string>();
-    bool isDayLight = true;
+    private bool isDayLight = true;
 
     public void addNightLight(string light)
     {

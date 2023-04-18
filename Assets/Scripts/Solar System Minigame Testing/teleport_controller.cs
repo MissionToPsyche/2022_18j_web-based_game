@@ -8,6 +8,7 @@ public class teleport_controller
     private List<string> planetsVisited = new List<string>();
     private bool teleport= false;
     private bool Win = false;
+    private int pointsEarned = 0;
     private teleport_controller() { }
     public static teleport_controller getInstance() { return tpC; }
 
@@ -44,6 +45,8 @@ public class teleport_controller
         if(finalscore > 1200)
         {
             Win= true;
+            pointsEarned = 450;
         }
+        Win = false;
     }
 }
