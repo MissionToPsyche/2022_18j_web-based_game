@@ -12,6 +12,9 @@ public class Timer : MonoBehaviour
     public Image tier2;
     public Image tier3;
 
+    public int T1Seconds;
+    public int T2Seconds;
+
     [Header("Timer Settings")]
     public double currentTime;
     public bool countDown;
@@ -39,12 +42,12 @@ public class Timer : MonoBehaviour
         System.TimeSpan span = System.TimeSpan.FromSeconds(currentTime);
         timerText.text = hasFormat ? span.ToString(format) : currentTime.ToString();
 
-        if (span.TotalSeconds > 110){
+        if (span.TotalSeconds > T2Seconds){
             tier1.enabled = false;
             tier2.enabled = false;
             tier3.enabled = true;
         }
-        else if (span.TotalSeconds > 90){
+        else if (span.TotalSeconds > T1Seconds){
             tier1.enabled = false;
             tier2.enabled = true;
             tier3.enabled = false;
