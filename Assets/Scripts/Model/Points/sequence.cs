@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class sequence
@@ -18,7 +19,9 @@ public class sequence
     {
         // if the parent object (object containing the puzzle piece), 
         // is equal to the piece in sequence the function will return true
-        if(parentObjName == order[currentposition])
+
+        Debug.Log(order[currentposition]);
+        if (parentObjName == order[currentposition])
         {
             // if the currentposition is not the last index in the list,
             // it can be incremented
