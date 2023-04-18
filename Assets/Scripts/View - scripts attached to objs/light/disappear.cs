@@ -19,14 +19,28 @@ public class disappear : MonoBehaviour
         if (!lightC.isDay() && GetComponent<MeshRenderer>().enabled)
         {
             GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
+            if (GetComponent<BoxCollider>())
+            {
+                GetComponent<BoxCollider>().enabled = false;
+            }
+            if (GetComponent<MeshCollider>())
+            {
+                GetComponent<MeshCollider>().enabled = false;
+            }
         }
         // if the lights are on, and the mesh renderer is not
         // enabled yet, enabled it and the box collider
         else if (lightC.isDay() && !GetComponent<MeshRenderer>().enabled)
         {
-            GetComponent<MeshRenderer>().enabled = true;
-            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<MeshRenderer>().enabled = true; 
+            if (GetComponent<BoxCollider>())
+            {
+                GetComponent<BoxCollider>().enabled = true;
+            }
+            if (GetComponent<MeshCollider>())
+            {
+                GetComponent<MeshCollider>().enabled = true;
+            }
         }
     }
 }

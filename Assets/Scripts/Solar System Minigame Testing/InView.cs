@@ -15,6 +15,7 @@ public class InView : MonoBehaviour
     private GameObject PlanetVisited;
     private GameObject Points;
     private teleport_controller tpC = teleport_controller.getInstance();
+    private point_controller pointC = point_controller.getInstance();
 
     private bool visited = false;
     private Vector3 originalPos;
@@ -61,7 +62,8 @@ public class InView : MonoBehaviour
         {
             // set win or lose status
             // return to office scene
-            tpC.WinLose(float.Parse(GameObject.Find("Light Minutes").GetComponent<TextMeshProUGUI>().text.Split(" ")[0]));
+            pointC.SpaceExplorerIncScore(tpC.WinLose(float.Parse(GameObject.Find("Light Minutes").GetComponent<TextMeshProUGUI>().text.Split(" ")[0])));
+            
             SceneManager.LoadScene("Office");
         }
     }

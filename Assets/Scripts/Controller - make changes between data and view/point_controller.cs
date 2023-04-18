@@ -39,6 +39,8 @@ public class point_controller
     private string initial_side;
     private string initial_total;
 
+    private int spaceExplorerScore = 0;
+
     private point_controller() {
         currentSeq = officeSeq;
     }
@@ -132,6 +134,30 @@ public class point_controller
         else
         {
             return officeHints[currentSeq.getPos()];
+        }
+    }
+
+    public void SpaceExplorerIncScore(int score)
+    {
+        // first time playing the mini game and winning
+        if(spaceExplorerScore == 0)
+        {
+            spaceExplorerScore= score;
+            game_score.updateMain(score);
+        }
+
+        // has played previously, but scored better on the current run through
+        else
+        {
+            if(score > spaceExplorerScore)
+            {
+                // the previous score gets subtracted from the current main score
+                // the new score is now saved
+                // the new score is now added to the main score
+                game_score.updateMain(0 - spaceExplorerScore);
+                spaceExplorerScore= score;
+                game_score.updateMain(score);
+            }
         }
     }
 }

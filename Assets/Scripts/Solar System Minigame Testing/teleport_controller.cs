@@ -7,8 +7,6 @@ public class teleport_controller
     private static teleport_controller tpC = new teleport_controller();
     private List<string> planetsVisited = new List<string>();
     private bool teleport= false;
-    private bool Win = false;
-    private int pointsEarned = 0;
     private teleport_controller() { }
     public static teleport_controller getInstance() { return tpC; }
 
@@ -40,13 +38,20 @@ public class teleport_controller
         this.teleport = false;
     }
 
-    public void WinLose(float finalscore)
+    public int WinLose(float finalscore)
     {
-        if(finalscore > 1200)
+        // player needs to get within top 1/3 to gain points on space explorer mission
+        // determined to be aroud 810 as (highest - lowest)/3
+        if(finalscore < 810)
         {
-            Win= true;
-            pointsEarned = 450;
+            // 640 is approximately just below the lowest score possible
+            // get the percent error then convert it to the inverted percent
+            // this is the mulitplier with the base value
+            // if the player gets close to 640, they nearly get all 500 points
+
+            return (int)((1 - (Mathf.Abs(finalscore - 640) / 640)) * 500);
         }
-        Win = false;
+
+        return 0;
     }
 }
