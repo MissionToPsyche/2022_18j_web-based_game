@@ -15,7 +15,13 @@ public class point_controller
 
     private string[] officeHints = new string[] {
         "Look at WHEN the Psyche Mission was accepted by NASA!",
-        ""
+        "Check out the safe to see what's inside! You've encountered the 4 digit code already!",
+        "Looks like you found a desk key! Check around the desk to find what it unlocks! (Make sure you have it selected in your inventory!",
+        "Hmmm... the image from the maze craze game looked like it was a spacecraft. Is there another spacecraft in the room?",
+        "The magnet on the board looks useful for later.",
+        "Maybe something got thrown away?",
+        "The note may be onto something!",
+        "Check out the planets to explore space!"
     };
     private sequence conferenceSeq = new sequence(new string[] {"Whiteboard","WiFi Router","CoffeeMachine","Clock"});
 
