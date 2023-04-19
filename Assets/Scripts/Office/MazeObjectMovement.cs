@@ -43,14 +43,28 @@ public class MazeObjectMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        if(collision.gameObject.tag == "Finish")
         {
-            float time = float.Parse(timerText.text);
-            int tspent = (int)Math.Round(time);
-            int tpoints = 1000 - tspent;
-            pointC.timerMission(tpoints);
+            Debug.Log(timerText.text);
+            double time = TimeSpan.ParseExact(timerText.text, "mm':'ss':'ff", null, 0).TotalSeconds;
+            Debug.Log(time);
+            int tspent = (int)Math.Ceiling(time);
+            
+            if (tspent <= 45){
+                pointC.timerMission(1000);
+            }           
+            else if (tspent <= 75){
+                pointC.timerMission(750);
+            }
+            else{
+                pointC.timerMission(500);
+            }
+            
+            // int tpoints = 1000 - tspent;
+            // pointC.timerMission(tpoints);
 
-            FinishLine();
+            Debug.Log("Win!");
+            SceneManager.LoadScene("Office");
         }
     }
 
