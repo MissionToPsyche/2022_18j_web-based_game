@@ -23,7 +23,8 @@ public class teleport_controller
     }
     public bool allPlanetsVisited()
     {
-        return planetsVisited.Count == 8;
+        // for the sake of the demo, it will be set to 5 planets reset back to 8 later
+        return planetsVisited.Count == 5;
     }
     public void teleporting()
     {
