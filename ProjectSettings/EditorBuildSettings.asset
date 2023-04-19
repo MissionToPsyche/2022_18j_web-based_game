@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SimonSaysPuzzle.unity
     guid: 9034ff6c75d1e064ba7367e82a87c4e1
+  - enabled: 1
+    path: Assets/Scenes/SpaceRacePuzzle.unity
+    guid: 4557b711464cd3a478ebb907d65d6aa6
   m_configObjects: {}
