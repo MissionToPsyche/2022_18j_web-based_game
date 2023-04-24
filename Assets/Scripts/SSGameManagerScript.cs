@@ -26,6 +26,8 @@ public class SSGameManagerScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         buttonColors.Add(new List<Color32> { new Color32(255, 100, 100, 255), new Color32(255, 0, 0, 255) });
         buttonColors.Add(new List<Color32> { new Color32(255, 187, 109, 255), new Color32(255, 136, 0, 255) });
         buttonColors.Add(new List<Color32> { new Color32(162, 255, 124, 255), new Color32(72, 248, 0, 255) });
@@ -116,7 +118,8 @@ public class SSGameManagerScript : MonoBehaviour
         {
             points = points-100;
         }
-        yield return null;
+        yield return new WaitForSeconds(0.7f);
+        SceneManager.LoadScene("ConferenceRoom");
     }
 
     void PlayerWon()

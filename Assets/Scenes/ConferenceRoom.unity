@@ -4155,7 +4155,7 @@ MonoBehaviour:
   scene:
     asset: {fileID: 102900000, guid: 9034ff6c75d1e064ba7367e82a87c4e1, type: 3}
     guid: 9034ff6c75d1e064ba7367e82a87c4e1
-  myAudioSource: {fileID: 0}
+  myAudioSource: {fileID: 296939821}
 --- !u!4 &1606491111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456804, guid: 4073f41b7d930f94d9470df64ec12b53, type: 3}
