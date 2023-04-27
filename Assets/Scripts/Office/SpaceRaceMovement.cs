@@ -72,7 +72,7 @@ public class SpaceRaceMovement : MonoBehaviour
             // pointC.timerMission(tpoints);
 
             Debug.Log("Win!");
-            SceneManager.LoadScene("Office");
+            SceneManager.LoadScene("ConferenceRoom");
         }
     }
 }

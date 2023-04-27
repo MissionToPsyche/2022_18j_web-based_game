@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Computer Terminal.unity
     guid: e543bf3a9c2f549f187679a15c6a32de
+  - enabled: 1
+    path: Assets/Scenes/SpaceRacePuzzle.unity
+    guid: 4557b711464cd3a478ebb907d65d6aa6
   m_configObjects: {}
