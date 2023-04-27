@@ -710,6 +710,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAudioSource: {fileID: 74070404}
+  myScene:
+    asset: {fileID: 0}
+    guid: 00000000000000000000000000000000
 --- !u!114 &510030746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2365,6 +2368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e25b9f1cde55b4f9e455e89f0b7dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correct_code: 2017
+  enter_code: ____
+  myScene:
+    asset: {fileID: 102900000, guid: 1c96d09970e45a84bb80f4247bf59111, type: 3}
+    guid: 1c96d09970e45a84bb80f4247bf59111
 --- !u!1 &1239202759
 GameObject:
   m_ObjectHideFlags: 0
