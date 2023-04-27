@@ -4249,8 +4249,8 @@ GameObject:
   - component: {fileID: 1681694627}
   - component: {fileID: 1681694626}
   - component: {fileID: 1681694625}
-  - component: {fileID: 1681694629}
   - component: {fileID: 1681694628}
+  - component: {fileID: 1681694629}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -4359,9 +4359,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681694623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbfccbbb4259247be421060dff8cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: 93051f0e3a6f0a34fa58f15e9e3d2df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene:
+    asset: {fileID: 102900000, guid: 1b0ff010ed5cbd247bc9d36f887a5d5e, type: 3}
+    guid: 1b0ff010ed5cbd247bc9d36f887a5d5e
   myAudioSource: {fileID: 296939821}
 --- !u!1 &1695963811
 GameObject:
