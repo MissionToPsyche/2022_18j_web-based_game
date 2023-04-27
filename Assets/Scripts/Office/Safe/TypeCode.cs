@@ -5,14 +5,16 @@ using UnityEngine.UI;
 using TMPro;
 using System.Text;
 using UnityEngine.SceneManagement;
+using Eflatun.SceneReference;
 
 public class TypeCode : MonoBehaviour
 {
     private GameObject type_code;
 
     //example to see if working
-    private string correct_code = "2017";
-    private string enter_code = "____";
+    [SerializeField] private string correct_code;
+    [SerializeField] private string enter_code;
+    [SerializeField] private SceneReference myScene;
     public string entered_code
     {
         get { return enter_code; }
@@ -27,8 +29,8 @@ public class TypeCode : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
 
         type_code = GameObject.Find("typed_code").gameObject;
-        type_code.GetComponent<TextMeshProUGUI>().text = "____";
-        entered_code = "____";
+        type_code.GetComponent<TextMeshProUGUI>().text = enter_code;
+        //entered_code = "____";
     }
 
     // Update is called once per frame
@@ -83,7 +85,7 @@ public class TypeCode : MonoBehaviour
         {
             GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.green;
             Safe_Locked.IsLocked = false;
-            SceneManager.LoadScene("Office");
+            SceneManager.LoadScene(myScene.Name);
         }
         else
         {
