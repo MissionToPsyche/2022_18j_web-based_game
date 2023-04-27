@@ -123,6 +123,8 @@
     <Compile Include="Assets/Scripts/Office/Lights.cs" />
     <Compile Include="Assets/Scripts/View - scripts attached to objs/TrashBin.cs" />
     <Compile Include="Assets/Scripts/View - scripts attached to objs/light/disappear.cs" />
+    <Compile Include="Assets/Scripts/TypingCodeManuel.cs" />
+    <Compile Include="Assets/Scripts/Terminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/Scripts.asmdef" />

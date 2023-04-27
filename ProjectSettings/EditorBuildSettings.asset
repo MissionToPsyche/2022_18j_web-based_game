@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fax Machine Code.unity
     guid: 4ec8e1dd48200994fa1a7d60fa4d0ac7
+  - enabled: 1
+    path: Assets/Scenes/Computer Terminal.unity
+    guid: e543bf3a9c2f549f187679a15c6a32de
   m_configObjects: {}
