@@ -14,7 +14,7 @@ public class ExitSafeCode : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(delegate {
             myAudioSource.Play();
-            Debug.Log("Loading Conference Room");
+            Debug.Log("Loading {myScene.name}");
             SceneManager.LoadScene(myScene.Name);
         });
     }

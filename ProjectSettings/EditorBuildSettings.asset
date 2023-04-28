@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceRacePuzzle.unity
     guid: 4557b711464cd3a478ebb907d65d6aa6
+  - enabled: 1
+    path: Assets/Scenes/Projector Code.unity
+    guid: a664d93be2c5e0e4bb30dc2a38bd7519
   m_configObjects: {}

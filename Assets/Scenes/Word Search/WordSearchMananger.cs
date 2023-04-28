@@ -57,6 +57,7 @@ public class WordSearchMananger : MonoBehaviour
     private string URL = "https://randomword.com/";
 
     private point_controller pointC = point_controller.getInstance();
+    private scene_controller sceneC = scene_controller.getInstance();
 
     #endregion
     private void Start()
