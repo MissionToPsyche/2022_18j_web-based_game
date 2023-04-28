@@ -8,6 +8,7 @@ public class point_controller
 {
     private static point_controller pointC = new point_controller();
     private score game_score = new score();
+    private int sSFails = 0;
 
     // Sequences of puzzle piece order
     // Will be selected based on which room player is located
@@ -159,5 +160,15 @@ public class point_controller
                 game_score.updateMain(score);
             }
         }
+    }
+
+    public void SSFailed()
+    {
+        sSFails += 1;
+    }
+
+    public int getSSFails()
+    {
+        return sSFails;
     }
 }
