@@ -1,18 +1,10 @@
 ﻿<Properties StartupConfiguration="{0C507046-BF64-44B1-727E-3EE9DA6BF855}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Office/Safe/ENTERButtonCode.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Office/Chair/Timer.cs">
     <Files>
-      <File FileName="Assets/Scenes/Word Search/WordSearchMananger.cs" Line="5" Column="19" />
-      <File FileName="Assets/Scenes/Word Search/WordSearchLetterController.cs" />
-      <File FileName="Assets/Scripts/SSGameManagerScript.cs" />
-      <File FileName="Assets/Scripts/ClickChangeScene.cs" />
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Popup/Popup_object.cs" />
-      <File FileName="Assets/Scripts/ChangeSequence.cs" />
-      <File FileName="Assets/Scripts/Controller - make changes between data and view/point_controller.cs" />
-      <File FileName="Assets/Scripts/Office/Safe/ExitSafeCode.cs" />
-      <File FileName="Assets/Scripts/Office/Safe/NumberButtonCode.cs" Line="18" Column="85" />
-      <File FileName="Assets/Scripts/TypingCodeManuel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Terminal.cs" Line="145" Column="26" />
-      <File FileName="Assets/Scripts/Office/Safe/ENTERButtonCode.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scenes/Word Search/WordSearchLetterController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Word Search/WordSearchMananger.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/Office/MazeObjectMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Office/Chair/Timer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,10 +17,10 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Controller - make changes between data and view" expanded="True" />
                 <Node name="Office" expanded="True">
-                  <Node name="Chair" expanded="True" />
-                  <Node name="Safe" expanded="True">
-                    <Node name="ENTERButtonCode.cs" selected="True" />
+                  <Node name="Chair" expanded="True">
+                    <Node name="Timer.cs" selected="True" />
                   </Node>
+                  <Node name="Safe" expanded="True" />
                 </Node>
                 <Node name="Solar System Minigame Testing" expanded="True" />
                 <Node name="View - scripts attached to objs" expanded="True">
