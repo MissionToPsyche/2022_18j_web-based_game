@@ -5,13 +5,16 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Net;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class WordSearchMananger : MonoBehaviour
 {
+    //todo
+    //implament multiplayer - both comp and friendly
+    //get it on steam, then make it for mobile
+    //ads/ ingame purchases
+
     #region Vars
 
-    private bool firstComplete = false;
     public bool isPlaying = true;
     public bool WantRandomLetters = false;
     private int RandomSeed = 5;
@@ -55,8 +58,6 @@ public class WordSearchMananger : MonoBehaviour
     public char[,] WordSearchBoard;
 
     private string URL = "https://randomword.com/";
-
-    private point_controller pointC = point_controller.getInstance();
 
     #endregion
     private void Start()
@@ -641,23 +642,6 @@ public class WordSearchMananger : MonoBehaviour
     {
         OnWordSearchComplete.transform.DOScale(Vector3.one, LerpTime);
         CompleteTimeText.text = "Congrats! You got all the words in " + TimeToComplete.ToString("F1") + " seconds!";
-        if(firstComplete == false)
-        {
-            if (TimeToComplete <= 600)
-            {
-                pointC.timerMission(1000);
-            }
-            else if (TimeToComplete <= 900)
-            {
-                pointC.timerMission(750);
-            }
-            else
-            {
-                pointC.timerMission(500);
-            }
-        }
-
-        firstComplete = true;
     }
 
     /// <summary>
