@@ -17,11 +17,11 @@ public class SSGameManagerScript : MonoBehaviour
     public AudioSource audioSource;
     public CanvasGroup buttons;
     public GameObject startButton;
-    private bool firstCompleted = false;
 
     private bool playerLost = false;
     private int taskIndex = 0;
 
+    public int points = 1000;
     private point_controller pointC = point_controller.getInstance();
 
     void Start()
@@ -114,29 +114,17 @@ public class SSGameManagerScript : MonoBehaviour
     {
         audioSource.PlayOneShot(loseSound);
         playerSequenceList.Clear();
-        pointC.SSFailed();
+        if (points > 0)
+        {
+            points = points-100;
+        }
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("ConferenceRoom");
     }
 
     void PlayerWon()
     {
-        if(firstCompleted == false)
-        {
-            if (pointC.getSSFails() <= 0)
-            {
-                pointC.timerMission(1000);
-            }
-            else if (pointC.getSSFails() <= 2)
-            {
-                pointC.timerMission(750);
-            }
-            else
-            {
-                pointC.timerMission(500);
-            }
-        }
-        firstCompleted = true;
+        pointC.timerMission(points);
         SceneManager.LoadScene("ConferenceRoom");
     }
 }
