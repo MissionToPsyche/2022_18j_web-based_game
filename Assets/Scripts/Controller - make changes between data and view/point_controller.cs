@@ -28,10 +28,10 @@ public class point_controller
 
     private string[] conferenceHints = new string[] {
         "Maybe the whiteboard has some important information on it?",
-        "Projector",
+        "Why don't you see what is being projected?",
         "Need more information? Use the internet!",
         "Where might you enter a password?",
-        "Placeholder (markers)",
+        "What is that little box on the table?",
         "All this thinking may have you tired, need a refresher?",
         "That seems like an important number, try to type it in somewhere.",
         "Take a break and watch some cartoons",
