@@ -15,6 +15,8 @@ public class TypeCode : MonoBehaviour
     [SerializeField] private string correct_code;
     [SerializeField] private string enter_code;
     [SerializeField] private SceneReference myScene;
+    [SerializeField] private AudioSource correct;
+    [SerializeField] private AudioSource wrong;
     public string entered_code
     {
         get { return enter_code; }
@@ -83,15 +85,30 @@ public class TypeCode : MonoBehaviour
         // Take the user back to the main screen with safe door opened
         if(entered_code == correct_code)
         {
-            GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.green;
-            Safe_Locked.IsLocked = false;
-            SceneManager.LoadScene(myScene.Name);
+            StartCoroutine(CorrectCodeEntered());
         }
         else
         {
-            GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.red;
+            StartCoroutine(WrongCodeEntered());
         }
 
 
+    }
+
+    IEnumerator CorrectCodeEntered()
+    {
+        GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.green;
+        correct.Play();
+        Safe_Locked.IsLocked = false;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(myScene.Name);
+
+    }
+
+    IEnumerator WrongCodeEntered()
+    {
+        GameObject.Find("typed_code").GetComponent<TextMeshProUGUI>().color = Color.red;
+        wrong.Play();
+        yield return new WaitForSeconds(2);
     }
 }

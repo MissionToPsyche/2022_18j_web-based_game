@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{0C507046-BF64-44B1-727E-3EE9DA6BF855}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View - scripts attached to objs/Points/main_mission.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Office/Safe/TypeCode.cs">
     <Files>
-      <File FileName="Assets/Scenes/Word Search/WordSearchLetterController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/Word Search/WordSearchMananger.cs" Line="660" Column="30" />
-      <File FileName="Assets/Scripts/Office/MazeObjectMovement.cs" Line="53" Column="1" />
-      <File FileName="Assets/Scripts/Office/Chair/Timer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SSGameManagerScript.cs" Line="133" Column="38" />
-      <File FileName="Assets/Scripts/Controller - make changes between data and view/point_controller.cs" Line="169" Column="1" />
-      <File FileName="Assets/Scripts/View - scripts attached to objs/Points/main_mission.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/SSGameManagerScript.cs" Line="76" Column="6" />
+      <File FileName="Assets/Scripts/ClickChangeScene.cs" Line="28" Column="6" />
+      <File FileName="Assets/Tests/PlayMode/SceneTransTest.cs" Line="22" Column="26" />
+      <File FileName="Assets/Scripts/View - scripts attached to objs/Popup/Popup_object.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/View - scripts attached to objs/Points/main_mission.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller - make changes between data and view/point_controller.cs" Line="24" Column="43" />
+      <File FileName="Assets/Scripts/Solar System Minigame Testing/space_explorer_camera.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/Solar System Minigame Testing/InView.cs" Line="73" Column="33" />
+      <File FileName="Assets/Scripts/Office/Safe/ExitSafeCode.cs" Line="15" Column="62" />
+      <File FileName="Assets/Scripts/Terminal.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Office/Safe/TypeCode.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,19 +24,14 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Controller - make changes between data and view" expanded="True" />
                 <Node name="Office" expanded="True">
-                  <Node name="Chair" expanded="True" />
-                  <Node name="Safe" expanded="True" />
+                  <Node name="Safe" expanded="True">
+                    <Node name="TypeCode.cs" selected="True" />
+                  </Node>
                 </Node>
                 <Node name="Solar System Minigame Testing" expanded="True" />
                 <Node name="View - scripts attached to objs" expanded="True">
-                  <Node name="Camera" expanded="True" />
-                  <Node name="inventory" expanded="True" />
-                  <Node name="light" expanded="True" />
-                  <Node name="Points" expanded="True">
-                    <Node name="main_mission.cs" selected="True" />
-                  </Node>
+                  <Node name="Points" expanded="True" />
                   <Node name="Popup" expanded="True" />
-                  <Node name="scene" expanded="True" />
                 </Node>
               </Node>
               <Node name="Tests" expanded="True">
@@ -46,7 +45,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e8a4d690-73d9-4abf-999e-dc7bf156ee16" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8de1e187-d5e3-4bd8-9446-0a2671915c12" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

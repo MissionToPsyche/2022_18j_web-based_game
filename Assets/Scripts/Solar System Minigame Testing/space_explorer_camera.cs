@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class space_explorer_camera : MonoBehaviour
 {
-
     private camera_controller camC = camera_controller.getInstance();
     private teleport_controller tpC = teleport_controller.getInstance();
     public bool paused = false;

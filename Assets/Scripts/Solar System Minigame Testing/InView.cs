@@ -27,6 +27,7 @@ public class InView : MonoBehaviour
     private MeshRenderer planetRender;
     private Plane[] cameraFrustum;
     private Collider planetCollider;
+    [SerializeField] private AudioSource myAudioSource;
 
     void Start()
     {
@@ -41,8 +42,6 @@ public class InView : MonoBehaviour
         // To detect if the newly zoomed in planet is within the camera's view
         planetRender = GetComponent<MeshRenderer>();
         planetCollider = GetComponent<Collider>();
-
-
     }
 
     // Update is called once per frame
@@ -73,6 +72,7 @@ public class InView : MonoBehaviour
         // teleport to planet
         // add distance to total
         // mark as visited
+        myAudioSource.Play();
         travelTo();
         tpC.teleporting();
         teleport();

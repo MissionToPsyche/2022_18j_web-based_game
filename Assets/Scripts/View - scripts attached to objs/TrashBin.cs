@@ -7,7 +7,6 @@ public class TrashBin : MonoBehaviour
     private Interact_Distance ID = Interact_Distance.GetInsance();
     private inventory_controller invC = inventory_controller.getInstance();
     private scene_controller sceneC = scene_controller.getInstance();
-    [SerializeField] private AudioSource myAudioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +27,6 @@ public class TrashBin : MonoBehaviour
             {
                 if (SItem == "magnet image")
                 {
-                    myAudioSource.Play();
                     invC.useItem();
                 }
 

@@ -13,15 +13,21 @@ public class ExitSafeCode : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(delegate {
-            myAudioSource.Play();
-            Debug.Log("Loading {myScene.name}");
-            SceneManager.LoadScene(myScene.Name);
+            StartCoroutine(CodeEntered());
         });
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator CodeEntered()
+    {
+        myAudioSource.Play();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(myScene.Name);
+
     }
 }

@@ -31,7 +31,13 @@ public class ClickChangeScene : MonoBehaviour
 
     public void LoadScene()
     {
+        StartCoroutine(Loading());
+    }
+
+    IEnumerator Loading()
+    {
         myAudioSource.Play();
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(scene.Name);
     }
 }

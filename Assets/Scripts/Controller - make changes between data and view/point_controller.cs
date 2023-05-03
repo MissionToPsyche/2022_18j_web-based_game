@@ -12,7 +12,7 @@ public class point_controller
 
     // Sequences of puzzle piece order
     // Will be selected based on which room player is located
-    private sequence officeSeq = new sequence(new string[] { "Calendar_Main", "DeskKey_Main", "DeskDrawer_Main", "WhiteBoard_Main", "Magnet_Main", "TrashBin_Main", "Switch_Main" });
+    private sequence officeSeq = new sequence(new string[] { "Calendar_Main", "DeskKey_Main", "DeskDrawer_Main", "WhiteBoard_Main", "Magnet_Main", "TrashBin_Main", "Switch_Main","Door"});
 
     private string[] officeHints = new string[] {
         "Look at WHEN the Psyche Mission was accepted by NASA!",
@@ -22,7 +22,8 @@ public class point_controller
         "The magnet on the board looks useful for later.",
         "Maybe something got thrown away?",
         "The note may be onto something!",
-        "Check out the planets to explore space!"
+        "Check out the planets to explore space!",
+        "The door seems to be unlocked."
     };
     private sequence conferenceSeq = new sequence(new string[] { "Whiteboard", "ProjectorBody", "WiFi Router", "CT Hitbox", "Box of Markers", "CoffeeMachine", "FM Hitbox", "Television", "Clock"});
 
